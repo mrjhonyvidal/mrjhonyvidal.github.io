@@ -36,10 +36,15 @@
 
 .intro-text {
 
+  margin: 0 auto;
+  float: none;
+
   /* remove space after last child element */
   > *:last-child {
     margin-bottom: 0;
   }
+
+
 }
 
 
