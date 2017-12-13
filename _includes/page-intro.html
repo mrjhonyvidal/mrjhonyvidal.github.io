@@ -6,7 +6,11 @@
     {% endunless %}
     {% assign intro_image = intro_image | escape %}
     <div class="intro-image">
-      <img src="{{ intro_image }}" alt="{{ page.title }}">
+      <img srcset="assets/images/background_code_bigger_1280.jpg 1280w, 
+          assets/images/background_code_medium_960.jpg 960w,
+          assets/images/background_code_small_480.jpg 480w" 
+          src="{{ intro_image }}" 
+          alt="{{ page.title }}">
         <a href="hire-me" class="btn">Hire me</a> 
     </div>
   {% endif %}
