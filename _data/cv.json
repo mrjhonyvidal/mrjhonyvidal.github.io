@@ -6,7 +6,7 @@
     "email": "elephwebb@gmail.com",
     "phone": "(+54)11 5579 - 7799 ",
     "website": "https://elephwebb.github.io",
-    "summary": "Have 5 years of experience developing intranet systems and websites from frontend to backend. Have two main goals for my career, graduate as software engineer and become a Senior developer at some Startup in Buenos Aires which is where I will be living until 2023 at least.",
+    "summary": "Have 5 years of experience developing intranet systems and websites from frontend to backend.",
     "location": {
       "address": "Almagro - Capital Federal",
       "postalCode": "C1082AA",
@@ -36,9 +36,9 @@
       "endDate": "2017-05-01",
       "summary": "Responsible for the main product of the company: Guindastes.com, an online B2B and web directory of companies of construction & cranes machines in Brazil with online searchs for equipments for rent and sale, companies profiles and an B2C ecommerce of pieces & accessories;",
       "highlights": [
-        "Build the main search of equipments next implement using Algolia SaaS",
+        "Build the main search of equipments using Algolia SaaS",
         "Design the internal CRM used by clients",
-        "Design the architecture to the REST API, document using Oracle-APIRY, add security for the different layers of it, make accessible to clients and frontend developers",
+        "Design the architecture to the REST API, document using APIRY, add security for the different layers of it, make accessible to clients and frontend developers",
         "Develop, Test and Maintain the code source and treat data entry with the following stack: PHP OOP, Laravel, PHP CLI, Javascript, Jquery, AngularJS, Gulp, VM - Vagrant, Unix, MySQL, Workbench, Git, Bitbucket, Postman, cURL, PHPUnit, Behat, Jasmine&Karma, e2e, TravisCI, Functional and No Functional Requirements, KanBan Methodology, PHP Wordpress && OpenCart."
       ]
     }
