@@ -17,7 +17,7 @@ Had always a passion about Internet, but had never been the most popular guy at 
 
 Love to find out great designed applications around the web, with the perfect balance between effects, user interaction, well distributed data, fast and well written.
 
-Seems easy but actually there is a lot of hard work behind all that, lots of try outs and failures and, as strange as it sounds, but the most simpler things are the most difficult to accomplish. I think someone already said that, not sure...
+Seems easy but actually there is a lot of hard work behind all that, lots of try outs and failures and, as strange as it sounds, but the most "simple things" are the most difficult to accomplish. I think someone already said that, not sure...
 
 Wanna become a web developer? Try out [FreeCodeCamp](https://www.freecodecamp.org/) or send me a message via [via Twitter](https://twitter.com/mrelephwebb).
 
