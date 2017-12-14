@@ -2,7 +2,7 @@
 title: "Layout: Hero Image"
 image: /assets/images/eder-oliveira-180877.jpg
 categories:
-  - Layout
+  - blog
 tags:
   - content
   - image

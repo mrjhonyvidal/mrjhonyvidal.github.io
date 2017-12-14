@@ -1,4 +1,5 @@
 ---
+permalink: /about/
 title: "About me"
 layout: about
 author:
@@ -6,14 +7,19 @@ author:
   picture: /assets/images/profile_freelancer_smaller.jpg
 ---
 
- I'm a **fullstack web and mobile developer** with 5 years of experience.
+Just a ordinary guy born in São Paulo, Brazil and went away to live in Argentina, a country that I respect a lot and where my heart lives. 
 
- My toolbelt is composed by the following [tools & skills]({{ site.baseurl}}{% link hire-me.md %}).
- 
- These are the **[main projects]({{ site.baseurl }}{% link projects.md %})** I've worked so far. Hopefully, the next ones will be yours :-).
+Autodidact, gamer, web developer, passionated about jazz, folk and gypsy songs.
 
- Do you need a hand in developing a new project or make a small fix in your App? 
+Crazy for games since childhood, started play chess at age of 6, solving puzzles and building entire cities and virtual lives at 10 in SimCity and TheSims.
 
- Please [send me a message](mailto:{{ site.email }}), I will get back to you within 24 hours with a estimated deadline and price for the job, my minimum price is 15 U$D / hour, but depending on the size and amount of tasks we can negotiate a fixed price for the whole project that best fit your budget. 
+Had always a passion about Internet, but had never been the most popular guy at school which gave me a lot time to explore social networks, websites and systems at a different perspective. 
 
-You can find my open source code in: {% include icon-github.html username="elephwebb" %}
+Love to find out great designed applications around the web, with the perfect balance between effects, user interaction, well distributed data, fast and well written.
+
+Seems easy but actually there is a lot of hard work behind all that, lots of try outs and failures and, as strange as it sounds, but the most simpler things are the most difficult to accomplish. I think someone already said that, not sure...
+
+Wanna become a web developer? Try out [FreeCodeCamp](https://www.freecodecamp.org/) or send me a message via [via Twitter](https://twitter.com/mrelephwebb).
+
+All the best! Cheers! :-)
+

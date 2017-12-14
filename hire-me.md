@@ -5,7 +5,7 @@ permalink: /hire-me/
 ---
   I'm a **fullstack web and mobile developer** with 5 years of experience developing intranet systems and websites. 
 
-  Focus on clean code, good usability and respect deadlines.
+  With focus on clean code, good usability and respect deadlines.
 
   Do you need a hand in developing a new project or make a small fix in your App? 
 

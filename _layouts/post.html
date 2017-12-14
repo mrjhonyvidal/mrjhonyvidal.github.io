@@ -1,18 +1,29 @@
 ---
 layout: default
 ---
+
 {% include page-intro.html %}
 
 <main id="main" class="page-content" aria-label="Content">
-  <div class="inner">
-    <article class="entry-wrap">
-      <div class="entry-content">
-        {{ content }}
+  <div class="index inner">
+    <div>{{ content }}</div>
+
+    <div>
+      <header class="section-title">
+     
+      </header>
+      <div class="entries">
+        {% if site.plugins contains 'jekyll-paginate' and page.paginate %}
+          {% comment %}
+            Add paginator.posts loop if jekyll-paginate plugin is enabled
+            and page.paginate == true
+          {% endcomment %}
+          {% include posts-paginated.html %}
+        {% else %}
+          {% include posts-all.html %}
+        {% endif %}
       </div>
-      {% if site.disqus.shortname %}
-        {% include disqus_comments.html %}
-      {% endif %}
-    </article>
+    </div>
 
     {% include footer.html %}
   </div>

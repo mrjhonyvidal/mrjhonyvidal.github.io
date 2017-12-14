@@ -41,7 +41,8 @@ feed:
 
 # Pagination - https://jekyllrb.com/docs/pagination/
 paginate: 10
-paginate_path: /page:num/
+paginate_path: /:categories/:title/
+permalink: /:collection/:path/
 
 # Exclude from processing.
 exclude:
@@ -67,12 +68,39 @@ exclude:
   - /docs # ignore Basically Basic sample site
   - /example # ignore Basically Basic dev site
 
+# Collections
+collections:
+  faqs:
+    output    : true
+    permalink : /:collection/:path/
+    title     : FAQs
+  projects:
+    output    : true
+    permalink : /:collection/:path/
+    title     : Projects
+
 # Front Matter Defaults
 defaults:
-  # _posts
+  # Blog Articles
   - scope:
-      path: "_posts"
+      path: _posts
       type: posts
     values:
       layout: post
+      category: articles
       read_time: true
+      support: true
+      breadcrumbs:
+        - label: "Blog Articles"
+          url: /articles/
+  - scope:
+      path: _projects
+      type: projects
+    values:
+      layout: project
+      category: projects
+      breadcrumbs:
+        - label: "Projects"
+          url: /projects/
+      seo:
+        type: "Working Projects"   

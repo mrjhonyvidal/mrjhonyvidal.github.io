@@ -1,0 +1,23 @@
+{% include page-intro.html %}
+
+<main id="main" class="page-content" aria-label="Content">
+  <div class="index inner">
+    <div>
+      <header class="section-title">
+      </header>
+      <div class="entries">
+        {% if site.plugins contains 'jekyll-paginate' and page.paginate %}
+          {% comment %}
+            Add paginator.posts loop if jekyll-paginate plugin is enabled
+            and page.paginate == true
+          {% endcomment %}
+          {% include posts-paginated.html %}
+        {% else %}
+          {% include posts-all.html %}
+        {% endif %}
+      </div>
+    </div>
+
+    {% include footer.html %}
+  </div>
+</main>
