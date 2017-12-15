@@ -7,7 +7,7 @@ author:
   picture: /assets/images/profile_freelancer_smaller.jpg
 ---
 
-I'm just an ordinary guy born in São Paulo, Brazil and went away to live in Argentina some time ago, a country that I respect a lot and where my heart lives. 
+I'm just a ordinary guy born in São Paulo, Brazil and went away to live in Argentina some time ago, a country that I respect a lot and where my heart lives. 
 
 Autodidact, gamer, web developer, passionated about jazz, folk and gypsy songs.
 
