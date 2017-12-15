@@ -16,23 +16,25 @@ The code source and how to test can be found in [GitHub]('https://www.github.com
 
 ## Quick Summary ##
 
-[Toolbelt](#toolbelt)
-[Introduction](#introduction)
-[Business Model](#business-model)
-[Requirements with KanBan](#requirements)
-[Define Business Model](#business-model)
-[API Endpoints](#api-endpoints)
-[Design API](#design-api)
-[Pre Testing the API](#pre-testing-the-api)
-[Development Environment](#development-environment)
-[Git Workflow](#git-workflow)
+- [Toolbelt](#toolbelt)
+- [Introduction](#introduction)
+- [Define Business Model](#business-model)
+- [Requirements with KanBan](#requirements)
+- [API Endpoints](#api-endpoints)
+- [Design API](#design-api)
+- [Pre Testing the API](#pre-testing-the-api)
+- [Development Environment](#development-environment)
+- [Git Workflow](#git-workflow)
 
-[Unless all requirements are completed](#requirements)
-	[Green tests first](#writing-tests)
-	[Red](#red)
-	[Refactoring](#refactoring)
-	[Commit Commit Commit](#commit-commit-commit)
-	[Repeating the cycle](#repeating-the-cycle)
+Unless all [Requirements](#requirements) are completed do |
+
+- [Green tests first](#writing-tests)
+- [Red](#red)
+- [Refactoring](#refactoring)
+- [Commit Commit Commit](#commit-commit-commit)
+- [Repeating the cycle](#repeating-the-cycle)
+
+endif 
 
 
 ## ToolBelt ##
@@ -93,7 +95,35 @@ packages: free, monthly(debit), yearly. payment_methods: credit_card until 12 ti
 
 DDD, Domain Driven Design PHP, In Laravel??
 
+## Requirements ##
+
+User Model
+User registration :: events email - emailcatcher
+	---- Type::
+		---- Regular
+		---- Empresa
+		---- Company/Cliente
+
+Transaction on Cliente Registration, to create admin user.
+	call createAdminUser(UserType $type)
+			_setAdminPermissions()
+
+Internally Admin or Users with Create User Permission.
+Othersiwe createUser()
+		  _setUserRoles(Roles $role)
+		  _setUserPermissions(array $permissions)
+
+
+
+User authentication
+User recovery password
+User revoke key
+Package (what is our service) how many books can download
+Plan
+Payment --- callback --- payment gateway
+
 
 ## API Endpoints ##
 
-## Requirements ##
+
+

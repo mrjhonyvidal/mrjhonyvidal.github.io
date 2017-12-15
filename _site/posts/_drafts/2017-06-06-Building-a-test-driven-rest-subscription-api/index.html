@@ -211,23 +211,35 @@
 
 <h2 id="quick-summary">Quick Summary</h2>
 
-<p><a href="#toolbelt">Toolbelt</a>
-<a href="#introduction">Introduction</a>
-<a href="#business-model">Business Model</a>
-<a href="#requirements">Requirements with KanBan</a>
-<a href="#business-model">Define Business Model</a>
-<a href="#api-endpoints">API Endpoints</a>
-<a href="#design-api">Design API</a>
-<a href="#pre-testing-the-api">Pre Testing the API</a>
-<a href="#development-environment">Development Environment</a>
-<a href="#git-workflow">Git Workflow</a></p>
+<ul>
+  <li><a href="#toolbelt">Toolbelt</a></li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#business-model">Define Business Model</a></li>
+  <li><a href="#requirements">Requirements with KanBan</a></li>
+  <li><a href="#api-endpoints">API Endpoints</a></li>
+  <li><a href="#design-api">Design API</a></li>
+  <li><a href="#pre-testing-the-api">Pre Testing the API</a></li>
+  <li><a href="#development-environment">Development Environment</a></li>
+  <li><a href="#git-workflow">Git Workflow</a></li>
+</ul>
 
-<p><a href="#requirements">Unless all requirements are completed</a>
-	<a href="#writing-tests">Green tests first</a>
-	<a href="#red">Red</a>
-	<a href="#refactoring">Refactoring</a>
-	<a href="#commit-commit-commit">Commit Commit Commit</a>
-	<a href="#repeating-the-cycle">Repeating the cycle</a></p>
+<table>
+  <tbody>
+    <tr>
+      <td>Unless all <a href="#requirements">Requirements</a> are completed do</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><a href="#writing-tests">Green tests first</a></li>
+  <li><a href="#red">Red</a></li>
+  <li><a href="#refactoring">Refactoring</a></li>
+  <li><a href="#commit-commit-commit">Commit Commit Commit</a></li>
+  <li><a href="#repeating-the-cycle">Repeating the cycle</a></li>
+</ul>
+
+<p>endif</p>
 
 <h2 id="toolbelt">ToolBelt</h2>
 
@@ -283,15 +295,39 @@
 
 <p>plan_payment_methods.</p>
 
-<p>Downgrade anytime. In case payment failure then your account will downgrade to free again. All your data, equipments will be kept. – Free: until 3 equipamentos, 1 user, 15 days with a public ad-profile in companies search by service. WhatsApp Plugin register / add contact – jekyll guy, direct quotes on profile. inform your phone and whatsapp contact..</p>
+<p>Downgrade anytime. In case payment failure then your account will downgrade to free again. All your data, equipments will be kept. – Free: until 3 equipamentos, 1 user, 15 days with a public ad-profile in companies search by service. WhatsApp Plugin register / add contact – jekyll guy, direct quotes on profile. inform your phone and whatsapp contact.. post jobs.</p>
 
 <p>packages: free, monthly(debit), yearly. payment_methods: credit_card until 12 times. 20% discount or boleto.</p>
 
 <p>DDD, Domain Driven Design PHP, In Laravel??</p>
 
+<h2 id="requirements">Requirements</h2>
+
+<p>User Model
+User registration :: events email - emailcatcher
+	—- Type::
+		—- Regular
+		—- Empresa
+		—- Company/Cliente</p>
+
+<p>Transaction on Cliente Registration, to create admin user.
+	call createAdminUser(UserType $type)
+			_setAdminPermissions()</p>
+
+<p>Internally Admin or Users with Create User Permission.
+Othersiwe createUser()
+		  _setUserRoles(Roles $role)
+		  _setUserPermissions(array $permissions)</p>
+
+<p>User authentication
+User recovery password
+User revoke key
+Package (what is our service) how many books can download
+Plan
+Payment — callback — payment gateway</p>
+
 <h2 id="api-endpoints">API Endpoints</h2>
 
-<h2 id="requirements">Requirements</h2>
 
       </div>
     </article>
