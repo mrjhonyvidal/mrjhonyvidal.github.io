@@ -12,7 +12,7 @@ We're going to build a Subscription System API for Online Services using [REST](
 
 The API will implement different Payment Gateways like (Stripe, PagSeguro/Brazil), it contains User Authentication and Registration using OAuth - JWT protocol for security. 
 
-The code source and how to test can be found in [GitHub]('https://www.github.com/elephwebb/test-driven-subscription-api').
+The code source and online API can be found in [GitHub]('https://www.github.com/elephwebb/test-driven-subscription-api').
 
 ## Quick Summary ##
 
@@ -39,7 +39,7 @@ endif
 
 ## ToolBelt ##
 
-- GIT, Varnish or [Docker](http://laradock.io/) - Development Environment
+- GIT, Varnish AND/OR [Docker](http://laradock.io/) - Development Environment
 - PHP Laravel, OOP, SOLID, Design Patterns
 - Swagger for API Design
 - Postman / SoapUI for simple tests on endpoints
@@ -48,7 +48,7 @@ endif
 - Heroku to publish our API
 
 
-We will design it using [Swagger](https://swagger.io/)and [APIRY](https://swagger.io/).
+We will design it using [Swagger](https://swagger.io/) and [APIRY](https://apiary.io/), you pick the one that is most comfortable to you.
 
 Basically the idea is to document the Endpoints using a standard so it's easier to design, test and colaborate with others developers, so it's clear what the API does or not without spend time write down software to implement it. It's important spend some time think what we want to accomplish, what we want to build. 
 
