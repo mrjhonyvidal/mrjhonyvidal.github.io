@@ -121,7 +121,8 @@
 .sidebar-toggle-wrapper {
   position: fixed;
   color: $base-color;
-
+  background-image: url(https://elephwebb.github.io/assets/images/lego-brick-green.png);
+  background-repeat: no-repeat;
   top: 0.675rem;
   right: 0;
   cursor: pointer;
