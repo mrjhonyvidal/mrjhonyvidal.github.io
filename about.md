@@ -7,7 +7,7 @@ author:
   picture: /assets/images/profile_freelancer_smaller.jpg
 ---
 
-## Who am I
+## Who am I?
 
 My name is Jhony Vidal and I'm born in São Paulo (Brazil) and currently living in Buenos Aires (Argentina), a country that I respect a lot and where my heart lives. 
 
