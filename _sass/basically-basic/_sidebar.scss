@@ -75,7 +75,7 @@
   }
 
   .menu {
-    @include fluid-type($min-vw, $max-vw, 24px, 48px);
+    @include fluid-type($min-vw, $max-vw, 16px, 38px);
     position: relative;
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
@@ -120,9 +120,12 @@
 
 .sidebar-toggle-wrapper {
   position: fixed;
+  color: $base-color;
+
   top: 0.675rem;
   right: 0;
   cursor: pointer;
+
   z-index: 10000;
 
   .toggle-inner {
@@ -136,6 +139,7 @@
 .sidebar-toggle-label {
   -ms-flex-order: 2;
   order: 2;
+  color: $text-color;
   margin-left: 0.5rem;
   font-weight: bold;
 }

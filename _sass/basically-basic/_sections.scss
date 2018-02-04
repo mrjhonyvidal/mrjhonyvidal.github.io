@@ -130,9 +130,10 @@
   }
 
   &--about {
-    $section-about-bg-color: mix(#000, #4b3624, 50%);
+    $section-about-bg-color: mix(#7171C6, #4b3624, 100%);
 
     background-color: $section-about-bg-color;
+
 
     &::before {
       @include scrimgradient("to right", $section-about-bg-color);
@@ -152,8 +153,8 @@
     }
   }
 
-  &--about {
-    $section-about-bg-color: mix(#000, #2a201b, 50%);
+  &--post {
+    $section-about-bg-color: mix(#EE5C42, #CD4F39, 100%);
 
     background-color: $section-about-bg-color;
 
@@ -176,9 +177,10 @@
   }
 
   &--work {
-    $section-work-bg-color: mix(#000, #6e2364, 50%);
+    $section-work-bg-color: mix(#00CD66, #008B45, 100%);
 
     background-color: $section-work-bg-color;
+    background-image: url(https://elephwebb.github.io/assets/images/lego-background-inverse.jpg);
 
     &::before {
       @include scrimgradient("to right", $section-work-bg-color);
