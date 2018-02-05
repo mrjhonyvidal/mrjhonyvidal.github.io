@@ -24,6 +24,8 @@ Love to find out great designed applications around the web, with the perfect ba
 
 Seems easy but actually there is a lot of hard work behind all that, lots of try outs and failures and, as strange as it sounds, but the **most "simple things" are the most difficult to accomplish**. I think someone already said that.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-njpmRrMPKc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 With no more to say, if you want me to be part of your team or just ask me some help in your project, so please [get in contact with me](/hire-me#contact-form).
 
 All the best! Cheers! :-)
