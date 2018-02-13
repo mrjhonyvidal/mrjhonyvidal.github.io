@@ -9,3 +9,14 @@ Check his other Jekyll template: **[Minimal Mistakes](https://github.com/mmistak
 And for those that like Jekyll and automated tools and perfomance just read this great article wrote by him on his blog **[Jekyll Optimization and Working Flow](https://mademistakes.com/articles/using-jekyll-2017/).**
 
 Happy code! Keep learning.
+
+### Development
+
+bundle install
+
+bundle exec jekyll serve --watch
+
+
+## Build
+
+bundle exec jekyll build 
