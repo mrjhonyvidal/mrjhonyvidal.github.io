@@ -9,7 +9,7 @@ author:
 
 ## Who am I?
 
-My name is Jhony Vidal and I'm born in São Paulo (Brazil) and currently living in Buenos Aires (Argentina), a country that I respect a lot and where my heart lives. 
+My name is Jhony Vidal and I was born in São Paulo (Brazil), currently living in Buenos Aires (Argentina), a country that I respect a lot and where my heart lives. 
 
 I'm autodidact, gamer, web developer, passionated about chess, jazz, folk and gypsy songs.
 
