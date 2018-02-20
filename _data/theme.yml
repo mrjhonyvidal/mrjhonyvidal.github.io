@@ -1,5 +1,5 @@
 # Theme Skin
-skin: steel # default, night, plum, sea, soft, steel
+skin: default # default, night, plum, sea, soft, steel
 
 # Theme Text
 t:
@@ -33,6 +33,7 @@ google_fonts:
 
 navigation_pages:
   - about.md
+  - posts.md
   - projects.md
   - hire-me.md
   - cv.md

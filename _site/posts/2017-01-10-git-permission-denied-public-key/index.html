@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-    <title>9dapps.io</title>
-    <meta name="description" content="Save time buying pre-built apps for 9 dollars">
-    <link rel="canonical" href="http://localhost:4000/projects/2017-02-06-9-dapps-io/">
+    <title>Git Permissions Denied Public Key</title>
+    <meta name="description" content="A common problem that once and while I used to get through:">
+    <link rel="canonical" href="http://localhost:4000/posts/2017-01-10-git-permission-denied-public-key/">
   
 
   <script>
@@ -27,7 +27,7 @@
 </head>
 
 
-  <body class="layout--page 9dapps-io">
+  <body class="layout--page git-permissions-denied-public-key">
 
     <nav class="skip-links">
   <h2 class="screen-reader-text">Skip links</h2>
@@ -182,8 +182,8 @@
   
   <ul class="breadcrumbs">
     <li>
-      <a href="/projects/">
-        <svg class="icon icon--back-arrow" width="16px" height="16px"><use xlink:href="/assets/icons/icons.svg#icon-back-arrow"></use></svg> Projects
+      <a href="/posts/">
+        <svg class="icon icon--back-arrow" width="16px" height="16px"><use xlink:href="/assets/icons/icons.svg#icon-back-arrow"></use></svg> Posts
       </a>
     </li>
   </ul>
@@ -191,7 +191,7 @@
 
   <div class="inner">
     <div class="intro-text">
-      <h1 class="intro-title">9dapps.io
+      <h1 class="intro-title">Git Permissions Denied Public Key
 </h1>
       
 
@@ -200,11 +200,10 @@
           
 
           <p class="entry-meta">
-            <span class="byline-item"><svg class="icon icon--calendar" width="16px" height="16px"><use xlink:href="/assets/icons/icons.svg#icon-calendar"></use></svg><time datetime="2017-02-06T00:00:00-03:00">February 6, 2017</time></span>
+            <span class="byline-item"><svg class="icon icon--calendar" width="16px" height="16px"><use xlink:href="/assets/icons/icons.svg#icon-calendar"></use></svg><time datetime="2017-01-10T00:00:00-03:00">January 10, 2017</time></span>
             
-              <span class="byline-item"><svg class="icon icon--folder" width="16px" height="16px"><use xlink:href="/assets/icons/icons.svg#icon-folder"></use></svg>&nbsp;Ecommerce, MEAN
-</span>
             
+              <span class="byline-item"><svg class="icon icon--stopwatch" width="16px" height="16px"><use xlink:href="/assets/icons/icons.svg#icon-stopwatch"></use></svg>~1 min read</span>
             
             
           </p>
@@ -222,11 +221,71 @@
   <div class="inner">
     <article class="entry-wrap">
       <div class="entry-content">
-        <h2 id="dont-reinvent-the-wheel">Don’t reinvent the wheel</h2>
+        <p>A common problem that once and while I used to get through:</p>
 
-<p>Select the app that more looks like to what you want to build.</p>
+<p>Error:
+Permission denied (publickey).
+fatal: Could not read from remote repository.</p>
 
-<p>If you you want we can customize it or add new features to you, but is easier and cheaper than start from ground zero.</p>
+<p>Lets go through the following step/diagnostics:</p>
+
+<p>Please make sure you have the correct access rights
+and the repository exists.</p>
+
+<h4 id="1-is-ssh-keys-added-remotely-on-bitbucket-github-gitlab">1) is SSH Keys added remotely on Bitbucket, GitHub, GitLab?</h4>
+
+<h4 id="11-check-your-keys-locally-on-your-unixmac-shell">1.1) Check your keys locally on your *Unix/Mac shell:</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-add -l
+</code></pre></div></div>
+<p>The result should look like: (can have more than one, and/or using 4096 hash key)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2048 SHA256:TC7wexj0ceYk3lvtvb0hFc1yQclWl9O0jYvPlJhyWH4 /home/USERNAME/.ssh/id_rsa (RSA)
+</code></pre></div></div>
+
+<p>If doesn’t have SSH keys, generate them, follow the article on Bitbucket to <a href="https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html">set SSH keys</a></p>
+
+<p><a href="https://confluence.atlassian.com/bitbucket/configure-multiple-ssh-identities-for-gitbash-mac-osx-linux-271943168.html?_ga=2.133857606.91896796.1513512003-507030520.1505085689">For Multiple keys if is the case</a></p>
+
+<h4 id="2-stepdiagnostic-check-the-connection-with-your-server">2 step/diagnostic: check the connection with your server</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ssh -Tv git@bitbucket.org
+sudo ssh -Tv git@github.com
+</code></pre></div></div>
+
+<h4 id="3-stepdiagnostic-check-the-remote-url">3 step/diagnostic: check the remote url</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote -v
+
+Result 
+
+origin git@bitbucket.org:USERNAMEREPO/REPOSIRTORY.git (fetch)
+origin git@bitbucket.org:USERNAMEREPO/REPOSIRTORY.git (push)
+</code></pre></div></div>
+
+<p>Change URL, try:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote set-url origin https://USERNAME@bitbucket.org/USERNAME-REPO/REPOSITORY.git
+</code></pre></div></div>
+
+<p>Should look like this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote -v
+
+origin https://USERNAME@bitbucket.org/USERNAME-REPO/REPOSITORY.git (fetch)
+
+origin https://USERNAME@bitbucket.org/USERNAME-REPO/REPOSITORY.git (push)
+</code></pre></div></div>
+
+<h4 id="4-stepdiagnostic-check-use-of-sudo-before-git-command-when-is-to-remote-server">4 step/diagnostic: check use of sudo before git command when is to remote server</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push -u origin master  
+</code></pre></div></div>
+
+<p>versus</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo git push -u origin master
+</code></pre></div></div>
 
       </div>
     </article>

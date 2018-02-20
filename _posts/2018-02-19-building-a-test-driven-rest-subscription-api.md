@@ -10,7 +10,7 @@ tags: [test-driven, rest, laravel]
 
 We're going to build a Subscription System API for Online Services using [REST](https://spring.io/understanding/REST) and PHP Laravel 5.4/5.5.
 
-The API will implement different Payment Gateways like (Stripe, PagSeguro/Brazil), it contains User Authentication and Registration using OAuth - JWT protocol for security. 
+The API will implement different Payment Gateways like (Stripe, PayPal), it contains User Authentication and Registration using OAuth - JWT protocol for security. 
 
 The code source and online API can be found in [GitHub]('https://www.github.com/elephwebb/test-driven-subscription-api').
 
@@ -19,12 +19,19 @@ The code source and online API can be found in [GitHub]('https://www.github.com/
 - [Toolbelt](#toolbelt)
 - [Introduction](#introduction)
 - [Define Business Model](#business-model)
-- [Requirements with KanBan](#requirements)
-- [API Endpoints](#api-endpoints)
+- [Requirements with KanBan](#requirements) 
+- [API Endpoints](#rest-api-endpoints)
 - [Design API](#design-api)
 - [Pre Testing the API](#pre-testing-the-api)
 - [Development Environment](#development-environment)
 - [Git Workflow](#git-workflow)
+- [Code](#code)
+- [Push Always](#push-always)
+- [Deploy](#deploy)
+
+We will in future dive the section [Code](#code) in small chunks for better readability.
+
+To follow a test-driven approach we will apply the cycle Red-Green-Refactor and pay attention to False Green/Successful Tests
 
 Unless all [Requirements](#requirements) are completed do |
 
@@ -95,7 +102,10 @@ packages: free, monthly(debit), yearly. payment_methods: credit_card until 12 ti
 
 DDD, Domain Driven Design PHP, In Laravel??
 
+
 ## Requirements ##
+
+Add Image GIT KanBan and Shared Link to KanBanchi
 
 User Model
 User registration :: events email - emailcatcher
@@ -123,7 +133,32 @@ Plan
 Payment --- callback --- payment gateway
 
 
-## API Endpoints ##
+## REST API Endpoints ##
+
+
+## Design Api ##
+
+
+## Pre Testing The Api ##
+
+APIRY, CURL and Postman...
 
 
 
+## Development Environment ##
+
+
+## Git Workflow ##
+
+
+## Code ##
+
+Bunch of code following a sequential logic and applying essential tests
+
+Follow good practices, talk about SOLID, Design Patterns, DRY
+
+
+## Push Always ##
+
+
+## Deploy ##
