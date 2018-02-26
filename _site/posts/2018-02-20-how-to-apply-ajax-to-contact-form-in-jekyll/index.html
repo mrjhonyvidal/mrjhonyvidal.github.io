@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-    <title>Blog Articles</title>
-    <meta name="description" content="Collection of things learned troughout the way">
-    <link rel="canonical" href="/posts/">
+    <title>How To Apply Ajax To Contact Form In Jekyll</title>
+    <meta name="description" content="##Submitting with AJAX##">
+    <link rel="canonical" href="/posts/2018-02-20-how-to-apply-ajax-to-contact-form-in-jekyll/">
   
 
   <script>
@@ -27,7 +27,7 @@
 </head>
 
 
-  <body class="layout--post blog-articles">
+  <body class="layout--post how-to-apply-ajax-to-contact-form-in-jekyll">
 
     <nav class="skip-links">
   <h2 class="screen-reader-text">Skip links</h2>
@@ -179,22 +179,37 @@
 
 
   
+  
+  <ul class="breadcrumbs">
+    <li>
+      <a href="/posts/">
+        <svg class="icon icon--back-arrow" width="16px" height="16px"><use xlink:href="/assets/icons/icons.svg#icon-back-arrow"></use></svg> Posts
+      </a>
+    </li>
+  </ul>
+
 
   <div class="inner">
     <div class="intro-text">
-      <h1 class="intro-title">Blog Articles
+      <h1 class="intro-title">How To Apply Ajax To Contact Form In Jekyll
 </h1>
       
 
       
         
+          
+
+          <p class="entry-meta">
+            <span class="byline-item"><svg class="icon icon--calendar" width="16px" height="16px"><use xlink:href="/assets/icons/icons.svg#icon-calendar"></use></svg><time datetime="2018-02-20T00:00:00-03:00">February 20, 2018</time></span>
+            
+            
+              <span class="byline-item"><svg class="icon icon--stopwatch" width="16px" height="16px"><use xlink:href="/assets/icons/icons.svg#icon-stopwatch"></use></svg>~1 min read</span>
+            
+            
+          </p>
+        
       
 
-      
-        <div class="intro-more">
-          <p>Collection of things learned troughout the way</p>
-
-        </div>
       
 
       
@@ -204,7 +219,56 @@
 
 <main id="main" class="page-content" aria-label="Content">
   <div class="index inner">
-    <div>
+    <div><p>##Submitting with AJAX##</p>
+
+<p>Submitting a form with JavaScript saves a page load after sending a message, providing a more seamless experience. Viewers without JavaScript enabled fall back to the normal flow.</p>
+
+<p>To submit your contact form with JavaScript:</p>
+
+<p>Build and test your contact form
+Override the submit event on your form
+Change the page to notify your viewers the message was sent
+Start with this JavaScript snippet and adapt it for your site:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Helper function to get form data in the supported format</span>
+<span class="kd">function</span> <span class="nx">getFormDataString</span><span class="p">(</span><span class="nx">formEl</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">formData</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FormData</span><span class="p">(</span><span class="nx">formEl</span><span class="p">),</span>
+      <span class="nx">data</span> <span class="o">=</span> <span class="p">[];</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">keyValue</span> <span class="k">of</span> <span class="nx">formData</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">data</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">keyValue</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="s2">"="</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">keyValue</span><span class="p">[</span><span class="mi">1</span><span class="p">]));</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nx">data</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">"&amp;"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Fetch the form element</span>
+<span class="kd">var</span> <span class="nx">formEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"contact-form"</span><span class="p">);</span>
+
+<span class="c1">// Override the submit event</span>
+<span class="nx">formEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"submit"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nx">grecaptcha</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">recaptchaResponse</span> <span class="o">=</span> <span class="nx">grecaptcha</span><span class="p">.</span><span class="nx">getResponse</span><span class="p">();</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">recaptchaResponse</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// reCAPTCHA not clicked yet</span>
+      <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+
+  <span class="nx">request</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"load"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mi">302</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// CloudCannon redirects on success</span>
+      <span class="c1">// It worked</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+
+  <span class="nx">request</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">formEl</span><span class="p">.</span><span class="nx">method</span><span class="p">,</span> <span class="nx">formEl</span><span class="p">.</span><span class="nx">action</span><span class="p">);</span>
+  <span class="nx">request</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="s2">"Content-Type"</span><span class="p">,</span> <span class="s2">"application/x-www-form-urlencoded"</span><span class="p">);</span>
+  <span class="nx">request</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">getFormDataString</span><span class="p">(</span><span class="nx">formEl</span><span class="p">));</span>
+<span class="p">});</span>
+</code></pre></div></div>
 </div>
 
     <div>

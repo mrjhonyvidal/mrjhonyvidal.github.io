@@ -7,11 +7,11 @@
 <article class="entry">
   <header class="entry-header">
     <h3 class="entry-title">
-      <a href="{{ post.url | relative_url }}" rel="bookmark">{{ title | widont }}</a>
+      <a href="#" rel="bookmark">{{ title | widont }}</a>
     </h3>
     {% assign feature_image = post.image.feature %}
     {% if feature_image %}
-      <a href="{{ post.url | relative_url }}">
+      <a href="#">
         {% assign f = feature_image | split: '.' %}
         <noscript><img src="{{ f[0] | relative_url }}-320.{{ f[1] }}" class="entry-image"></noscript>
         <img data-sizes="auto"
@@ -41,10 +41,12 @@
       {{ post.excerpt | markdownify }}
 
       {% if post.website %}     
-        <p><a href="{{ post.website }}" target="_blank" class="more-link">{{ site.data.theme.t.visit_website | default: 'Visit Website' }} <svg class="icon icon--arrow-right" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-arrow-right' | prepend: 'assets/icons/' | absolute_url }}"></use></svg></a>
+      <!--{{ post.website }}-->
+      <!--{{ post.url | relative_url }}-->
+        <p><a href="#" target="_blank" class="more-link">{{ site.data.theme.t.visit_website | default: 'Visit Website' }} <svg class="icon icon--arrow-right" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-arrow-right' | prepend: 'assets/icons/' | absolute_url }}"></use></svg></a>
       {% endif %}
 
-      | <a href="{{ post.url | relative_url }}" class="more-link">{{ site.data.theme.t.read_more | default: 'Read More' }} <svg class="icon icon--arrow-right" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-arrow-right' | prepend: 'assets/icons/' | absolute_url }}"></use></svg></a></p>
+      | <a href="#" class="more-link">{{ site.data.theme.t.read_more | default: 'Read More' }} <svg class="icon icon--arrow-right" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-arrow-right' | prepend: 'assets/icons/' | absolute_url }}"></use></svg></a></p>
     {% endif %}
    
 </article>
