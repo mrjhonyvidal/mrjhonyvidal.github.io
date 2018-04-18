@@ -16,7 +16,7 @@ I’m a fullstack web and mobile developer with 7 years of experience developing
 With focus on clean code, good usability and deadlines. 
 
 
-You can check a [list of my projects here](/projects) and what tools were used;
+You can check a [list of my projects here](/projects) and what tools were used on each project individually.
 
 I have experience in a number of different stacks like: 
 
