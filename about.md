@@ -26,7 +26,7 @@ Seems easy but actually there is a lot of hard work behind all that, lots of try
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-njpmRrMPKc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-With no more to say, if you want me to be part of your team or just ask me some help in your project, so please [get in contact with me](/hire-me#contact-form).
+With no more to say, if you want me to be part of your team or just ask me some help in your project, please [get in contact with me](/hire-me#contact-form).
 
 All the best! Cheers! :-)
 
