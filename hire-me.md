@@ -18,12 +18,18 @@ You can check a [list of my projects here](/projects) and what tools were used;
 
 I have experience in a number of different stacks like: 
 
+FRONTEND
+- Javascript: ES6, Jquery, Backbone.js, Angular, React.js, Vue.js
 - Bootstrap, HTML5, CSS/SASS/Flexbox/PostCss.
+
+BACKEND
 - **PHP** OOP 5/7, Symfony, Laravel, Codeigniter, Yii
+- Node.js/Express.js
+- REST APIs
 - Ruby on Rails
 - Databases: MySQL, PostgreSQL, MongoDB, Redis, SQLite3
-- CMS/Ecommerce: Wordpress, WooCommerce, OpenCart, Magento
-- Javascript: ES6, Jquery, Backbone.js, Angular, React.js, Vue.js
+- CMS/Ecommerce: Wordpress CMS, WooCommerce, OpenCart, Magento
+
 
 But also manage well SEO, Product Design, UI/UX and [translations](https://getnative.me/user/8600). 
 
@@ -32,7 +38,7 @@ Here is my [Curriculum Vitae](/cv).
 Please send me a message through the form bellow or use one of the following Freelancer Plataforms: [Workana](https://www.workana.com/freelancer/22c4385db2ad4f196384541a2314bda9) or [Freelancer.com](https://www.freelancer.com/u/ElephWebb).
 
 
-I will get back to you within 24 hours with a estimated deadline and price for the job, my minimum price is 15 U$D/ hour, but depending on the size and amount of tasks we can negotiate a fixed price for the whole project that best fit your budget.
+I will get back to you within 24 hours with a estimated deadline and price for the job that fits your budget.
 
 
 I'll be more than happy to work in your next great App. :-)
