@@ -5,7 +5,9 @@ permalink: /hire-me/
 author:
   name: ElephWebb  
 ---
-Hi,
+Hi there,
+
+So, do you need a hand in launch your next big project online? I think I can help you.
 
 I’m a fullstack web and mobile developer with 7 years of experience developing intranet systems and websites.
 
