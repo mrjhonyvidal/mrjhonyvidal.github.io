@@ -63,6 +63,7 @@
     display: block;
     position: absolute;
     width: $navicon-width;
+    color: $menu-color;
     height: $navicon-height;
     transition-duration: $navicon-duration $navicon-duration / 2;
     border-radius: $navicon-width;
