@@ -57,7 +57,7 @@ endif
 - Heroku to publish our API
 
 
-We will the API Schema and Docs using [APIRY](https://apiary.io/).
+We will pre-built the API Schema and Docs using [APIRY](https://apiary.io/) before write a single line of code, mapping our business model/rules to the schema.
 
 Basically the idea is to document the Endpoints using a standard so it's easier to design, test and colaborate with others developers, so it's clear what the API does or not without spend time write down software to implement it. It's important spend some time think what we want to accomplish, what we want to build. 
 
