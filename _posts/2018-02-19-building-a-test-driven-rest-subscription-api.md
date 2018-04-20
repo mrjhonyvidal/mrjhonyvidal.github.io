@@ -6,6 +6,8 @@ last_modified_at: 2017-12-06 00:00:00
 tags: [test-driven, rest, laravel]
 ---
 
+## Still preparing the post and files...
+
 ## What we will build? ##
 
 We're going to build a Subscription System API for Online Services using [REST](https://spring.io/understanding/REST) and PHP Laravel 5.4/5.5.
