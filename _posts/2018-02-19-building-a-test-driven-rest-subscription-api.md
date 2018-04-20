@@ -57,7 +57,7 @@ endif
 - Heroku to publish our API
 
 
-We will design it using [Swagger](https://swagger.io/) and [APIRY](https://apiary.io/), you pick the one that is most comfortable to you.
+We will the API Schema and Docs using [APIRY](https://apiary.io/).
 
 Basically the idea is to document the Endpoints using a standard so it's easier to design, test and colaborate with others developers, so it's clear what the API does or not without spend time write down software to implement it. It's important spend some time think what we want to accomplish, what we want to build. 
 
@@ -96,7 +96,6 @@ Define the API endpoints even if in a piece of paper (or initially)
 
 
 ## Requirements ##
-
 
 
 ## REST API Endpoints ##
