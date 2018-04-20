@@ -18,9 +18,9 @@ I also would like to mention that debugg smartly is part of a test-driven enviro
 
 Here I share some secret techniquees by [Marek Kirejczyk, (VP of Engineering at DaftCode](https://www.quora.com/profile/Marek-Kirejczyk) on [Quora](http://qr.ae/TU16Nn) where he says:
 
-*Debug using binary search on your code. You can also do binary search your repository history (see git bisect). This technique can be very helpful when looking for bugs in the code.
-    
-*Undo the last change if you brake something. Because you make small steps and you keep app covered wit tests, you should be able quickly notice if you break something. Just undo the recent change and start step from scratch.
+* Debug using binary search on your code. You can also do binary search your repository history (see git bisect). This technique can be very helpful when looking for bugs in the code.
+   
+* Undo the last change if you brake something. Because you make small steps and you keep app covered wit tests, you should be able quickly notice if you break something. Just undo the recent change and start step from scratch.
 
 ## Setting Atom and EsLint
 
