@@ -93,46 +93,10 @@ Define the API endpoints even if in a piece of paper (or initially)
 
 
 ## Business Model ##
-Draw of interaction narrows. Pass this to Aurelio + documentation + code in Server. Just add a different package types with price plan: monthly - payment method, discount_percentage - payment method, anual - 
-
-plan_payment_methods.
-
-Downgrade anytime. In case payment failure then your account will downgrade to free again. All your data, equipments will be kept. -- Free: until 3 equipamentos, 1 user, 15 days with a public ad-profile in companies search by service. WhatsApp Plugin register / add contact -- jekyll guy, direct quotes on profile. inform your phone and whatsapp contact.. post jobs.
-
-packages: free, monthly(debit), yearly. payment_methods: credit_card until 12 times. 20% discount or boleto.
-
-
-DDD, Domain Driven Design PHP, In Laravel??
 
 
 ## Requirements ##
 
-Add Image GIT KanBan and Shared Link to KanBanchi
-
-User Model
-User registration :: events email - emailcatcher
-	---- Type::
-		---- Regular
-		---- Empresa
-		---- Company/Cliente
-
-Transaction on Cliente Registration, to create admin user.
-	call createAdminUser(UserType $type)
-			_setAdminPermissions()
-
-Internally Admin or Users with Create User Permission.
-Othersiwe createUser()
-		  _setUserRoles(Roles $role)
-		  _setUserPermissions(array $permissions)
-
-
-
-User authentication
-User recovery password
-User revoke key
-Package (what is our service) how many books can download
-Plan
-Payment --- callback --- payment gateway
 
 
 ## REST API Endpoints ##
