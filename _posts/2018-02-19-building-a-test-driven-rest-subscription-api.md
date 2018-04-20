@@ -14,7 +14,7 @@ We're going to build a Subscription System API for Online Services using [REST](
 
 The API will implement different Payment Gateways like (Stripe and PayPal), it contains User Authentication and Registration using OAuth - JWT protocol for security. 
 
-The code source and online API can be found in [GitHub](https://github.com/elephwebb/laravel-test-driven-rest-api).
+The code source and online API can be found in [GitHub](https://github.com/elephwebb/laravel-test-driven-rest-api) and you can contribute if you want.
 
 ## Quick Summary ##
 
