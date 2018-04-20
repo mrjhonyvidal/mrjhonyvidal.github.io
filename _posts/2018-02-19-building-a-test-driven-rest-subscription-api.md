@@ -50,7 +50,7 @@ endif
 
 - GIT, Varnish AND/OR [Docker](http://laradock.io/) - Development Environment
 - PHP Laravel, OOP, SOLID, Design Patterns
-- Swagger for API Design
+- APIRY for API Design
 - Postman / SoapUI for simple tests on endpoints
 - TravisCI for Continous Integration
 - Loader.io for benchmark
