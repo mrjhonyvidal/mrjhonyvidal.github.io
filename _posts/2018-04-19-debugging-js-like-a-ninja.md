@@ -24,8 +24,8 @@ Here I share some secret techniquees by [Marek Kirejczyk, (VP of Engineering at 
 
 ## Setting Atom and EsLint
 
-Here is quick video by Harry Wolff shared by [FreeCodeCamp](https://www.freecodecamp.org/) in their [YouTube Channel](https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ).
-https://www.youtube.com/watch?v=qhuFviJn-es
+Here is quick video by [Harry Wolff](https://www.youtube.com/watch?v=qhuFviJn-es)shared by [FreeCodeCamp](https://www.freecodecamp.org/) in their [YouTube Channel]('https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ').
+
 
 To complement the video, because, it turns down that in Atom didn't Lint the errors up on only following Harry's video, not sure why, besides he uses Visual Studio Code and in VSCode it worked out - tested. [https://hackernoon.com/what-is-eslint-how-do-i-set-it-up-on-atom-70f270f57296](What is ESLint? How do I set it up on Atom?). One detail, Atom recognizes every spaces inside the Tabs, not really Tabs, so in the eslintrc.json file use {"indent": { "errors", 2 } } if you use Tabs like me instead of spaces to make your identation. 
 
