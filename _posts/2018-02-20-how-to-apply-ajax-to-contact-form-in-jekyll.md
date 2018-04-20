@@ -13,8 +13,11 @@ Submitting a form with JavaScript saves a page load after sending a message, pro
 To submit your contact form with JavaScript:
 
 Build and test your contact form
+
 Override the submit event on your form
+
 Change the page to notify your viewers the message was sent
+
 Start with this JavaScript snippet and adapt it for your site:
 
 ```javascript
