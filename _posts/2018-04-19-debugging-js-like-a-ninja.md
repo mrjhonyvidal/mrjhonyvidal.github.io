@@ -17,9 +17,10 @@ Well that is the first step on debugging your code, pre debug automatically usin
 I also would like to mention that debugg smartly is part of a test-driven environment, because if you think write down tests, whether they are functional, acceptance, smokey, end-to-end whatever, the mindset is what counts, think the scenario, figure out what could be an expected error, make the famous Green-red-Green cycle, make it pass with minimal solution, then make it fails intentionally/expectedly, then refactor the code make it pass. Which reduce the time debugging the error in the long run. And a last think, debugging is not google the error, but think the error, rollback to a safe point where everything is working, try to expect the result, code in small pieces. 
 
 Here I share some secret techniquees by [Marek Kirejczyk, (VP of Engineering at DaftCode](https://www.quora.com/profile/Marek-Kirejczyk) on [Quora](http://qr.ae/TU16Nn) where he says:
-    -Debug using binary search on your code. You can also do binary search your repository history (see git bisect). This technique can be very helpful when looking for bugs in the code.
+
+*Debug using binary search on your code. You can also do binary search your repository history (see git bisect). This technique can be very helpful when looking for bugs in the code.
     
-    -Undo the last change if you brake something. Because you make small steps and you keep app covered wit tests, you should be able quickly notice if you break something. Just undo the recent change and start step from scratch.
+*Undo the last change if you brake something. Because you make small steps and you keep app covered wit tests, you should be able quickly notice if you break something. Just undo the recent change and start step from scratch.
 
 ## Setting Atom and EsLint
 
