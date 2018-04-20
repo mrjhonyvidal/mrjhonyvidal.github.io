@@ -30,3 +30,6 @@ https://www.youtube.com/watch?v=qhuFviJn-es
 To complement the video, because, it turns down that in Atom didn't Lint the errors up on only following Harry's video, not sure why, besides he uses Visual Studio Code and in VSCode it worked out - tested. [https://hackernoon.com/what-is-eslint-how-do-i-set-it-up-on-atom-70f270f57296](What is ESLint? How do I set it up on Atom?). One detail, Atom recognizes every spaces inside the Tabs, not really Tabs, so in the eslintrc.json file use {"indent": { "errors", 2 } } if you use Tabs like me instead of spaces to make your identation. 
 
 There are funny sceneres related to this Tab versus Spaces in Sillicon Valley's Serie : [I will update show the videos here instead of links to YouTube](https://www.youtube.com/watch?v=V7PLxL8jIl8)... one day. :-) 5 min break.
+
+
+## Continue...
