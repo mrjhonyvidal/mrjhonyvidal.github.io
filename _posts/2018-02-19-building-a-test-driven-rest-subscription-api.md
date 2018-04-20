@@ -10,9 +10,9 @@ tags: [test-driven, rest, laravel]
 
 ## What we will build? ##
 
-We're going to build a Subscription System API for Online Services using [REST](https://spring.io/understanding/REST) and PHP Laravel 5.4/5.5.
+We're going to build a Subscription System API for Online Services using [REST](https://spring.io/understanding/REST) and PHP Laravel 5.6.
 
-The API will implement different Payment Gateways like (Stripe, PayPal), it contains User Authentication and Registration using OAuth - JWT protocol for security. 
+The API will implement different Payment Gateways like (Stripe and PayPal), it contains User Authentication and Registration using OAuth - JWT protocol for security. 
 
 The code source and online API can be found in [GitHub]('https://www.github.com/elephwebb/test-driven-subscription-api').
 
