@@ -42,9 +42,9 @@
     {% if post.excerpt %}
       {{ post.excerpt | markdownify }}
       
-      {% if post.website %}     
+      
         <p><a href="{{ post.website }}" target="_blank" class="more-link">{{ site.data.theme.t.visit_website | default: 'Visit Website' }} <span class="icon icon--arrow-right">{% include icon-arrow-right.svg %}</span></a></p>
-      {% endif %}
+      
       
         <p><a href="{{ post.url | relative_url }}" class="more-link">{{ site.data.theme.t.read_more | default: 'Read More' }} <span class="icon icon--arrow-right">{% include icon-arrow-right.svg %}</span></a></p>
     {% endif %}
