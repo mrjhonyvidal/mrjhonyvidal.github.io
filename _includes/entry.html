@@ -7,33 +7,25 @@
 <article class="entry">
   <header class="entry-header">
     <h3 class="entry-title">
-      <a href="#" rel="bookmark">{{ title | widont }}</a>
+      <a href="{{ post.url | relative_url }" rel="bookmark">{{ title | widont }}</a>
     </h3>
-    {% assign feature_image = post.image.feature %}
-    {% if feature_image %}
-      <a href="#">
-        {% assign f = feature_image | split: '.' %}
-        <noscript><img src="{{ f[0] | relative_url }}-320.{{ f[1] }}" class="entry-image"></noscript>
-        <img data-sizes="auto"
-             src="{{ f[0] | relative_url }}-lq.{{ f[1] }}"
-             data-srcset="{{ f[0] | relative_url }}-lq.{{ f[1] }} 20w,
-                          {{ f[0] | relative_url }}-320.{{ f[1] }} 320w,
-                          {{ f[0] | relative_url }}-768.{{ f[1] }} 768w,
-                          {{ f[0] | relative_url }}-1024.{{ f[1] }} 1024w"
-             alt="{{ post.title | strip_html }}"
-             class="lazyload entry-image blur-up">
-      </a>
+   {% if post.image.thumbnail %}
+      {% assign entry_image = post.image.thumbnail %}
+      {% unless entry_image contains '://' %}
+        {% assign entry_image = entry_image | relative_url %}
+      {% endunless %}
+      {% assign entry_image = entry_image | escape %}
+      <img class="entry-image u-photo" src="{{ entry_image }}" alt="">
     {% endif %}
   </header>
-  <footer class="entry-meta">
+   <footer class="entry-meta">
     <ul>
-  
-      {% if post.read_time %}
-        <li><svg class="icon icon--stopwatch" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-stopwatch' | prepend: 'assets/icons/' | relative_url }}"></use></svg>{% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}</li>
-      {% endif %}
-      {% if site.data.comments[post.slug].size > 0 and post.comments %}
-        <li><a href="{{ post.url | relative_url }}#comments"><svg class="icon icon--comments" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments' | prepend: 'assets/icons/' | relative_url }}"></use></svg>{{ site.data.comments[post.slug] | size }} Comment{% if site.data.comments[post.slug].size > 1 %}s{% endif %}</a></li>
-      {% endif %}
+    {% if post.date %}
+      <li><span class="icon">{% include icon-calendar.svg %}</span><time class="entry-time" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time></li>
+    {% endif %}
+    {% if post.read_time %}
+      <li><span class="icon">{% include icon-stopwatch.svg %}</span>{% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}</li>
+    {% endif %}
     </ul>
   </footer>
   <div class="entry-excerpt">
