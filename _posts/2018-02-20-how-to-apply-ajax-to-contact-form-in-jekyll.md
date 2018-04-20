@@ -1,3 +1,11 @@
+---
+title: "Submitting a form using ajax in Jekyll"
+layout: page
+tags: Jekyll, Ajax
+---
+
+## Article is still imcomplete... ##
+
 ##Submitting with AJAX##
 
 Submitting a form with JavaScript saves a page load after sending a message, providing a more seamless experience. Viewers without JavaScript enabled fall back to the normal flow.
