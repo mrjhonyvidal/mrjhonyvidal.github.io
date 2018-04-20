@@ -31,14 +31,13 @@
   <div class="entry-excerpt">
     {% if post.excerpt %}
       {{ post.excerpt | markdownify }}
-
+      
       {% if post.website %}     
-      <!--{{ post.website }}-->
-      <!--{{ post.url | relative_url }}-->
-        <p><a href="#" target="_blank" class="more-link">{{ site.data.theme.t.visit_website | default: 'Visit Website' }} <svg class="icon icon--arrow-right" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-arrow-right' | prepend: 'assets/icons/' | absolute_url }}"></use></svg></a>
+        <p><a href="{{ post.website }}" target="_blank" class="more-link">{{ site.data.theme.t.visit_website | default: 'Visit Website' }} <span class="icon icon--arrow-right">{% include icon-arrow-right.svg %}</span></a></p>
       {% endif %}
-
-      | <a href="#" class="more-link">{{ site.data.theme.t.read_more | default: 'Read More' }} <svg class="icon icon--arrow-right" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-arrow-right' | prepend: 'assets/icons/' | absolute_url }}"></use></svg></a></p>
+      
+        <p><a href="{{ post.url | relative_url }}" class="more-link">{{ site.data.theme.t.read_more | default: 'Read More' }} <span class="icon icon--arrow-right">{% include icon-arrow-right.svg %}</span></a></p>
     {% endif %}
+  </div>
    
 </article>
