@@ -6,13 +6,15 @@ last_modified_at: 2017-12-06 00:00:00
 tags: [test-driven, rest, laravel]
 ---
 
+## Still preparing the post and files...
+
 ## What we will build? ##
 
-We're going to build a Subscription System API for Online Services using [REST](https://spring.io/understanding/REST) and PHP Laravel 5.4/5.5.
+We're going to build a Subscription System API for Online Services using [REST](https://spring.io/understanding/REST) and PHP Laravel 5.6.
 
-The API will implement different Payment Gateways like (Stripe, PayPal), it contains User Authentication and Registration using OAuth - JWT protocol for security. 
+The API will implement different Payment Gateways like (Stripe and PayPal), it contains User Authentication and Registration using OAuth - JWT protocol for security. 
 
-The code source and online API can be found in [GitHub]('https://www.github.com/elephwebb/test-driven-subscription-api').
+The code source and online API can be found in [GitHub](https://github.com/elephwebb/laravel-test-driven-rest-api) and you can contribute if you want.
 
 ## Quick Summary ##
 
@@ -48,14 +50,14 @@ endif
 
 - GIT, Varnish AND/OR [Docker](http://laradock.io/) - Development Environment
 - PHP Laravel, OOP, SOLID, Design Patterns
-- Swagger for API Design
+- APIRY for API Design
 - Postman / SoapUI for simple tests on endpoints
 - TravisCI for Continous Integration
 - Loader.io for benchmark
 - Heroku to publish our API
 
 
-We will design it using [Swagger](https://swagger.io/) and [APIRY](https://apiary.io/), you pick the one that is most comfortable to you.
+We will pre-built the API Schema and Docs using [APIRY](https://apiary.io/) before write a single line of code, mapping our business model/rules to the schema.
 
 Basically the idea is to document the Endpoints using a standard so it's easier to design, test and colaborate with others developers, so it's clear what the API does or not without spend time write down software to implement it. It's important spend some time think what we want to accomplish, what we want to build. 
 
@@ -91,46 +93,9 @@ Define the API endpoints even if in a piece of paper (or initially)
 
 
 ## Business Model ##
-Draw of interaction narrows. Pass this to Aurelio + documentation + code in Server. Just add a different package types with price plan: monthly - payment method, discount_percentage - payment method, anual - 
-
-plan_payment_methods.
-
-Downgrade anytime. In case payment failure then your account will downgrade to free again. All your data, equipments will be kept. -- Free: until 3 equipamentos, 1 user, 15 days with a public ad-profile in companies search by service. WhatsApp Plugin register / add contact -- jekyll guy, direct quotes on profile. inform your phone and whatsapp contact.. post jobs.
-
-packages: free, monthly(debit), yearly. payment_methods: credit_card until 12 times. 20% discount or boleto.
-
-
-DDD, Domain Driven Design PHP, In Laravel??
 
 
 ## Requirements ##
-
-Add Image GIT KanBan and Shared Link to KanBanchi
-
-User Model
-User registration :: events email - emailcatcher
-	---- Type::
-		---- Regular
-		---- Empresa
-		---- Company/Cliente
-
-Transaction on Cliente Registration, to create admin user.
-	call createAdminUser(UserType $type)
-			_setAdminPermissions()
-
-Internally Admin or Users with Create User Permission.
-Othersiwe createUser()
-		  _setUserRoles(Roles $role)
-		  _setUserPermissions(array $permissions)
-
-
-
-User authentication
-User recovery password
-User revoke key
-Package (what is our service) how many books can download
-Plan
-Payment --- callback --- payment gateway
 
 
 ## REST API Endpoints ##
