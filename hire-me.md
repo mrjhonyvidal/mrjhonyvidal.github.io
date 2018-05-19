@@ -37,7 +37,7 @@ But also manage well SEO, Product Design, UI/UX and [translations](https://getna
 
 Here is my [Curriculum Vitae](/cv).
 
-Please send me a message through the form bellow or use one of the following Freelancer Plataforms: [Workana](https://www.workana.com/freelancer/22c4385db2ad4f196384541a2314bda9) or [Freelancer.com](https://www.freelancer.com/u/ElephWebb).
+Please send me a message through the form bellow or use one of the following Freelancer Plataforms: [Workana](https://www.workana.com/freelancer/22c4385db2ad4f196384541a2314bda9), currently my rank in Workana is: #2,136 of 1,371,671 people and Ranked in Argentina: #55.
 
 
 I will get back to you within 24 hours with a estimated deadline and price for the job that fits your budget.

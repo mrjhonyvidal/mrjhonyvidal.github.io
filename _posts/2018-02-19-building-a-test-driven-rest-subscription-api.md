@@ -102,11 +102,11 @@ Define the API endpoints even if in a piece of paper (or initially)
 
 
 ## Design Api ##
-
+Using APIRY
 
 ## Pre Testing The Api ##
 
-APIRY, CURL and Postman...
+Using APIRY Test Helpers, cURL and POSTMAN. 
 
 
 
@@ -127,3 +127,6 @@ Follow good practices, talk about SOLID, Design Patterns, DRY
 
 
 ## Deploy ##
+
+
+## Publish DOC created by APIRY or Swagger ##
