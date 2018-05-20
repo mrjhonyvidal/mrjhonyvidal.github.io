@@ -16,6 +16,8 @@ The API will implement different Payment Gateways like (Stripe and PayPal), it c
 
 The code source and online API can be found in [GitHub](https://github.com/elephwebb/laravel-test-driven-rest-api) and you can contribute if you want.
 
+Here is the [KANBAN](https://trello.com/b/FVryIUaW) of the project.
+
 ## Quick Summary ##
 
 - [Toolbelt](#toolbelt)
@@ -30,27 +32,16 @@ The code source and online API can be found in [GitHub](https://github.com/eleph
 - [Code](#code)
 - [Push Always](#push-always)
 - [Deploy](#deploy)
+- [Measure](#measure)
 
-We will in future dive the section [Code](#code) in small chunks for better readability.
-
-To follow a test-driven approach we will apply the cycle Red-Green-Refactor and pay attention to False Green/Successful Tests
-
-Unless all [Requirements](#requirements) are completed do |
-
-- [Green tests first](#writing-tests)
-- [Red](#red)
-- [Refactoring](#refactoring)
-- [Commit Commit Commit](#commit-commit-commit)
-- [Repeating the cycle](#repeating-the-cycle)
-
-endif 
+We will in future split the section [Code](#code) in small chunks for better readability.
 
 
 ## ToolBelt ##
 
 - GIT, Varnish AND/OR [Docker](http://laradock.io/) - Development Environment
 - PHP Laravel, OOP, SOLID, Design Patterns
-- APIRY for API Design
+- APIRY for API Design and Tests
 - Postman / SoapUI for simple tests on endpoints
 - TravisCI for Continous Integration
 - Loader.io for benchmark
@@ -92,41 +83,74 @@ Define the API endpoints even if in a piece of paper (or initially)
 - [ ] [API Endpoints](#api-endpoints)
 
 
+
+
 ## Business Model ##
-
-
-## Requirements ##
 
 
 ## REST API Endpoints ##
 
 
+
+## Requirements ##
+
+
+
 ## Design Api ##
-Using APIRY
+
+
+
+
 
 ## Pre Testing The Api ##
 
-Using APIRY Test Helpers, cURL and POSTMAN. 
+
+
+
 
 
 
 ## Development Environment ##
 
 
+
+
+
+
 ## Git Workflow ##
+
+
+
+
 
 
 ## Code ##
 
-Bunch of code following a sequential logic and applying essential tests
 
-Follow good practices, talk about SOLID, Design Patterns, DRY
+```php
+namespace App;
+
+use Laravel\Passport\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
+class User extends Authenticatable
+{
+    use HasApiTokens, Notifiable;
+}
+```
+
 
 
 ## Push Always ##
 
 
+
+
 ## Deploy ##
 
 
-## Publish DOC created by APIRY or Swagger ##
+
+
+## Measure ##
+

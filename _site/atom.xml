@@ -1,59 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="/atom.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2018-02-26T06:31:04-03:00</updated><id>/</id><title type="html">ElephWebb.io</title><author><name>elephwebb</name></author><entry><title type="html">How To Apply Ajax To Contact Form In Jekyll</title><link href="/posts/2018-02-20-how-to-apply-ajax-to-contact-form-in-jekyll/" rel="alternate" type="text/html" title="How To Apply Ajax To Contact Form In Jekyll" /><published>2018-02-20T00:00:00-03:00</published><updated>2018-02-20T00:00:00-03:00</updated><id>/posts/how-to-apply-ajax-to-contact-form-in-jekyll</id><content type="html" xml:base="/posts/2018-02-20-how-to-apply-ajax-to-contact-form-in-jekyll/">&lt;p&gt;##Submitting with AJAX##&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2018-05-20T11:52:45-03:00</updated><id>http://localhost:4000/</id><title type="html">ElephWebb.io</title><author><name>elephwebb</name></author><entry><title type="html">Debugging Javascript as a Ninja</title><link href="http://localhost:4000/posts/2018-04-19-debugging-js-like-a-ninja/" rel="alternate" type="text/html" title="Debugging Javascript as a Ninja" /><published>2018-04-19T00:00:00-03:00</published><updated>2018-04-19T00:00:00-03:00</updated><id>http://localhost:4000/posts/debugging-js-like-a-ninja</id><content type="html" xml:base="http://localhost:4000/posts/2018-04-19-debugging-js-like-a-ninja/">&lt;h2 id=&quot;prepare-your-environment&quot;&gt;Prepare your Environment&lt;/h2&gt;
 
-&lt;p&gt;Submitting a form with JavaScript saves a page load after sending a message, providing a more seamless experience. Viewers without JavaScript enabled fall back to the normal flow.&lt;/p&gt;
+&lt;p&gt;Mistakes happen and by no chance you will write down code without make small tiny mistakes that were not a mistake initially. So why not have a automated way to catch them all and display before even save/compile your code?&lt;/p&gt;
 
-&lt;p&gt;To submit your contact form with JavaScript:&lt;/p&gt;
+&lt;p&gt;Well that is the first step on debugging your code, pre debug automatically using linters, a linters are tools with bunch of rules pre-defined using code standards, and is quite easy to set linters inside our favorite editor(sublime, atom, visual studio code, etc), the linters can also be runned in our command-line console, which is fantastic because we can set these bunch of rules that we want to be followed everytime the whole code is built and deployed to a QA environment, and is fantastic because we assure that not only our code is being “linted” to check mistakes, inconsistences but everyone that colaborate to the project, combining these linters with a nice tests suite stack, the bugs in your system can reduce drastically, which means less time debugging “ghost” mistakes and less time refactoring/improving features and adding more value to your business.&lt;/p&gt;
 
-&lt;p&gt;Build and test your contact form
-Override the submit event on your form
-Change the page to notify your viewers the message was sent
-Start with this JavaScript snippet and adapt it for your site:&lt;/p&gt;
+&lt;p&gt;I also would like to mention that debugg smartly is part of a test-driven environment, because if you think write down tests, whether they are functional, acceptance, smokey, end-to-end whatever, the mindset is what counts, think the scenario, figure out what could be an expected error, make the famous Green-red-Green cycle, make it pass with minimal solution, then make it fails intentionally/expectedly, then refactor the code make it pass. Which reduce the time debugging the error in the long run. And a last think, debugging is not google the error, but think the error, rollback to a safe point where everything is working, try to expect the result, code in small pieces.&lt;/p&gt;
 
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Helper function to get form data in the supported format&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getFormDataString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;formEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;formData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;FormData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;formEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
+&lt;p&gt;Here I share some secret techniquees by &lt;a href=&quot;https://www.quora.com/profile/Marek-Kirejczyk&quot;&gt;Marek Kirejczyk, (VP of Engineering at DaftCode&lt;/a&gt; on &lt;a href=&quot;http://qr.ae/TU16Nn&quot;&gt;Quora&lt;/a&gt; where he says:&lt;/p&gt;
 
-  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;keyValue&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;formData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;encodeURIComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keyValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;=&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;encodeURIComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keyValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]));&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Debug using binary search on your code. You can also do binary search your repository history (see git bisect). This technique can be very helpful when looking for bugs in the code.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Undo the last change if you brake something. Because you make small steps and you keep app covered wit tests, you should be able quickly notice if you break something. Just undo the recent change and start step from scratch.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;amp;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;h2 id=&quot;setting-atom-and-eslint&quot;&gt;Setting Atom and EsLint&lt;/h2&gt;
 
-&lt;span class=&quot;c1&quot;&gt;// Fetch the form element&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;formEl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;contact-form&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;p&gt;Here is quick video by &lt;a href=&quot;https://www.youtube.com/watch?v=qhuFviJn-es&quot;&gt;Harry Wolff&lt;/a&gt;shared by &lt;a href=&quot;https://www.freecodecamp.org/&quot;&gt;FreeCodeCamp&lt;/a&gt; in their &lt;a href=&quot;'https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ'&quot;&gt;YouTube Channel&lt;/a&gt;.&lt;/p&gt;
 
-&lt;span class=&quot;c1&quot;&gt;// Override the submit event&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;formEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;submit&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;preventDefault&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;p&gt;To complement the video, because, it turns down that in Atom didn’t Lint the errors up on only following Harry’s video, not sure why, besides he uses Visual Studio Code and in VSCode it worked out - tested. &lt;a href=&quot;What is ESLint? How do I set it up on Atom?&quot;&gt;https://hackernoon.com/what-is-eslint-how-do-i-set-it-up-on-atom-70f270f57296&lt;/a&gt;. One detail, Atom recognizes every spaces inside the Tabs, not really Tabs, so in the eslintrc.json file use {“indent”: { “errors”, 2 } } if you use Tabs like me instead of spaces to make your identation.&lt;/p&gt;
 
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;grecaptcha&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;recaptchaResponse&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;grecaptcha&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getResponse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;recaptchaResponse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// reCAPTCHA not clicked yet&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;p&gt;There are funny sceneres related to this Tab versus Spaces in Sillicon Valley’s Serie : &lt;a href=&quot;https://www.youtube.com/watch?v=V7PLxL8jIl8&quot;&gt;I will update show the videos here instead of links to YouTube&lt;/a&gt;… one day. :-) 5 min break.&lt;/p&gt;
 
-  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;XMLHttpRequest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;h2 id=&quot;continue&quot;&gt;Continue…&lt;/h2&gt;</content><author><name>elephwebb</name></author><category term="posts" /><category term="javascript" /><category term="eslint" /><category term="atom" /><summary type="html">Prepare your Environment</summary></entry><entry><title type="html">Divign into Searchability</title><link href="http://localhost:4000/posts/2018-04-18-diving-into-searchability/" rel="alternate" type="text/html" title="Divign into Searchability" /><published>2018-04-18T00:00:00-03:00</published><updated>2018-04-18T00:00:00-03:00</updated><id>http://localhost:4000/posts/diving-into-searchability</id><content type="html" xml:base="http://localhost:4000/posts/2018-04-18-diving-into-searchability/">&lt;h2 id=&quot;still-preparing&quot;&gt;Still preparing…&lt;/h2&gt;</content><author><name>elephwebb</name></author><category term="posts" /><summary type="html">Still preparing…</summary></entry><entry><title type="html">Building a Test-Driven REST Subscription API</title><link href="http://localhost:4000/posts/2018-02-19-building-a-test-driven-rest-subscription-api/" rel="alternate" type="text/html" title="Building a Test-Driven REST Subscription API" /><published>2018-02-19T00:00:00-03:00</published><updated>2017-12-05T21:00:00-03:00</updated><id>http://localhost:4000/posts/building-a-test-driven-rest-subscription-api</id><content type="html" xml:base="http://localhost:4000/posts/2018-02-19-building-a-test-driven-rest-subscription-api/">&lt;h2 id=&quot;still-preparing-the-post-and-files&quot;&gt;Still preparing the post and files…&lt;/h2&gt;
 
-  &lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;load&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;302&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// CloudCannon redirects on success&lt;/span&gt;
-      &lt;span class=&quot;c1&quot;&gt;// It worked&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;h2 id=&quot;what-we-will-build&quot;&gt;What we will build?&lt;/h2&gt;
 
-  &lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;formEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;formEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;action&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setRequestHeader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Content-Type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;application/x-www-form-urlencoded&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getFormDataString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;formEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>elephwebb</name></author><category term="posts" /><summary type="html">##Submitting with AJAX##</summary></entry><entry><title type="html">Building a Test-Driven REST Subscription API</title><link href="/posts/2018-02-19-building-a-test-driven-rest-subscription-api/" rel="alternate" type="text/html" title="Building a Test-Driven REST Subscription API" /><published>2018-02-19T00:00:00-03:00</published><updated>2017-12-05T21:00:00-03:00</updated><id>/posts/building-a-test-driven-rest-subscription-api</id><content type="html" xml:base="/posts/2018-02-19-building-a-test-driven-rest-subscription-api/">&lt;h2 id=&quot;what-we-will-build&quot;&gt;What we will build?&lt;/h2&gt;
+&lt;p&gt;We’re going to build a Subscription System API for Online Services using &lt;a href=&quot;https://spring.io/understanding/REST&quot;&gt;REST&lt;/a&gt; and PHP Laravel 5.6.&lt;/p&gt;
 
-&lt;p&gt;We’re going to build a Subscription System API for Online Services using &lt;a href=&quot;https://spring.io/understanding/REST&quot;&gt;REST&lt;/a&gt; and PHP Laravel 5.4/5.5.&lt;/p&gt;
+&lt;p&gt;The API will implement different Payment Gateways like (Stripe and PayPal), it contains User Authentication and Registration using OAuth - JWT protocol for security.&lt;/p&gt;
 
-&lt;p&gt;The API will implement different Payment Gateways like (Stripe, PayPal), it contains User Authentication and Registration using OAuth - JWT protocol for security.&lt;/p&gt;
+&lt;p&gt;The code source and online API can be found in &lt;a href=&quot;https://github.com/elephwebb/laravel-test-driven-rest-api&quot;&gt;GitHub&lt;/a&gt; and you can contribute if you want.&lt;/p&gt;
 
-&lt;p&gt;The code source and online API can be found in &lt;a href=&quot;'https://www.github.com/elephwebb/test-driven-subscription-api'&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here is the &lt;a href=&quot;https://trello.com/b/FVryIUaW&quot;&gt;KANBAN&lt;/a&gt; of the project.&lt;/p&gt;
 
 &lt;h2 id=&quot;quick-summary&quot;&gt;Quick Summary&lt;/h2&gt;
 
@@ -70,43 +52,24 @@ Start with this JavaScript snippet and adapt it for your site:&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;#code&quot;&gt;Code&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#push-always&quot;&gt;Push Always&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#deploy&quot;&gt;Deploy&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#measure&quot;&gt;Measure&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;We will in future dive the section &lt;a href=&quot;#code&quot;&gt;Code&lt;/a&gt; in small chunks for better readability.&lt;/p&gt;
-
-&lt;p&gt;To follow a test-driven approach we will apply the cycle Red-Green-Refactor and pay attention to False Green/Successful Tests&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Unless all &lt;a href=&quot;#requirements&quot;&gt;Requirements&lt;/a&gt; are completed do&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#writing-tests&quot;&gt;Green tests first&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#red&quot;&gt;Red&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#refactoring&quot;&gt;Refactoring&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#commit-commit-commit&quot;&gt;Commit Commit Commit&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#repeating-the-cycle&quot;&gt;Repeating the cycle&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;endif&lt;/p&gt;
+&lt;p&gt;We will in future split the section &lt;a href=&quot;#code&quot;&gt;Code&lt;/a&gt; in small chunks for better readability.&lt;/p&gt;
 
 &lt;h2 id=&quot;toolbelt&quot;&gt;ToolBelt&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;GIT, Varnish AND/OR &lt;a href=&quot;http://laradock.io/&quot;&gt;Docker&lt;/a&gt; - Development Environment&lt;/li&gt;
   &lt;li&gt;PHP Laravel, OOP, SOLID, Design Patterns&lt;/li&gt;
-  &lt;li&gt;Swagger for API Design&lt;/li&gt;
+  &lt;li&gt;APIRY for API Design and Tests&lt;/li&gt;
   &lt;li&gt;Postman / SoapUI for simple tests on endpoints&lt;/li&gt;
   &lt;li&gt;TravisCI for Continous Integration&lt;/li&gt;
   &lt;li&gt;Loader.io for benchmark&lt;/li&gt;
   &lt;li&gt;Heroku to publish our API&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;We will design it using &lt;a href=&quot;https://swagger.io/&quot;&gt;Swagger&lt;/a&gt; and &lt;a href=&quot;https://apiary.io/&quot;&gt;APIRY&lt;/a&gt;, you pick the one that is most comfortable to you.&lt;/p&gt;
+&lt;p&gt;We will pre-built the API Schema and Docs using &lt;a href=&quot;https://apiary.io/&quot;&gt;APIRY&lt;/a&gt; before write a single line of code, mapping our business model/rules to the schema.&lt;/p&gt;
 
 &lt;p&gt;Basically the idea is to document the Endpoints using a standard so it’s easier to design, test and colaborate with others developers, so it’s clear what the API does or not without spend time write down software to implement it. It’s important spend some time think what we want to accomplish, what we want to build.&lt;/p&gt;
 
@@ -144,50 +107,14 @@ Start with this JavaScript snippet and adapt it for your site:&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;business-model&quot;&gt;Business Model&lt;/h2&gt;
-&lt;p&gt;Draw of interaction narrows. Pass this to Aurelio + documentation + code in Server. Just add a different package types with price plan: monthly - payment method, discount_percentage - payment method, anual -&lt;/p&gt;
-
-&lt;p&gt;plan_payment_methods.&lt;/p&gt;
-
-&lt;p&gt;Downgrade anytime. In case payment failure then your account will downgrade to free again. All your data, equipments will be kept. – Free: until 3 equipamentos, 1 user, 15 days with a public ad-profile in companies search by service. WhatsApp Plugin register / add contact – jekyll guy, direct quotes on profile. inform your phone and whatsapp contact.. post jobs.&lt;/p&gt;
-
-&lt;p&gt;packages: free, monthly(debit), yearly. payment_methods: credit_card until 12 times. 20% discount or boleto.&lt;/p&gt;
-
-&lt;p&gt;DDD, Domain Driven Design PHP, In Laravel??&lt;/p&gt;
-
-&lt;h2 id=&quot;requirements&quot;&gt;Requirements&lt;/h2&gt;
-
-&lt;p&gt;Add Image GIT KanBan and Shared Link to KanBanchi&lt;/p&gt;
-
-&lt;p&gt;User Model
-User registration :: events email - emailcatcher
-	—- Type::
-		—- Regular
-		—- Empresa
-		—- Company/Cliente&lt;/p&gt;
-
-&lt;p&gt;Transaction on Cliente Registration, to create admin user.
-	call createAdminUser(UserType $type)
-			_setAdminPermissions()&lt;/p&gt;
-
-&lt;p&gt;Internally Admin or Users with Create User Permission.
-Othersiwe createUser()
-		  _setUserRoles(Roles $role)
-		  _setUserPermissions(array $permissions)&lt;/p&gt;
-
-&lt;p&gt;User authentication
-User recovery password
-User revoke key
-Package (what is our service) how many books can download
-Plan
-Payment — callback — payment gateway&lt;/p&gt;
 
 &lt;h2 id=&quot;rest-api-endpoints&quot;&gt;REST API Endpoints&lt;/h2&gt;
+
+&lt;h2 id=&quot;requirements&quot;&gt;Requirements&lt;/h2&gt;
 
 &lt;h2 id=&quot;design-api&quot;&gt;Design Api&lt;/h2&gt;
 
 &lt;h2 id=&quot;pre-testing-the-api&quot;&gt;Pre Testing The Api&lt;/h2&gt;
-
-&lt;p&gt;APIRY, CURL and Postman…&lt;/p&gt;
 
 &lt;h2 id=&quot;development-environment&quot;&gt;Development Environment&lt;/h2&gt;
 
@@ -195,114 +122,20 @@ Payment — callback — payment gateway&lt;/p&gt;
 
 &lt;h2 id=&quot;code&quot;&gt;Code&lt;/h2&gt;
 
-&lt;p&gt;Bunch of code following a sequential logic and applying essential tests&lt;/p&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-&lt;p&gt;Follow good practices, talk about SOLID, Design Patterns, DRY&lt;/p&gt;
+&lt;span class=&quot;k&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Laravel\Passport\HasApiTokens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Illuminate\Notifications\Notifiable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Illuminate\Foundation\Auth\User&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Authenticatable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;User&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Authenticatable&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HasApiTokens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Notifiable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;push-always&quot;&gt;Push Always&lt;/h2&gt;
 
-&lt;h2 id=&quot;deploy&quot;&gt;Deploy&lt;/h2&gt;</content><author><name>elephwebb</name></author><category term="posts" /><category term="test-driven" /><category term="rest" /><category term="laravel" /><summary type="html">Using best practices</summary></entry><entry><title type="html">How to solve N+1 SQL issues in Laravel</title><link href="/posts/2018-01-01-how-solve-n-plus-one-sql-issue-in-laravel/" rel="alternate" type="text/html" title="How to solve N+1 SQL issues in Laravel" /><published>2018-01-01T00:00:00-03:00</published><updated>2018-01-01T00:00:00-03:00</updated><id>/posts/how-solve-n-plus-one-sql-issue-in-laravel</id><content type="html" xml:base="/posts/2018-01-01-how-solve-n-plus-one-sql-issue-in-laravel/">&lt;p&gt;1.Describe N+1 problem and explain briefly the math behind SQL queries and what to be careful about to get the best from ORMs like Eloquent and the abstraction that it brings;&lt;/p&gt;
-
-&lt;p&gt;2.Identify Posible Solutions and case where to apply&lt;/p&gt;
-
-&lt;p&gt;3.Laravel Solution - EagearLoad, LazyLoad comparasion - App\Posts::with(‘tags’)-&amp;gt;get();&lt;/p&gt;
-
-&lt;p&gt;Add printscreen on troubleshooting with Chrome Dev Tools and Laravel Provider&lt;/p&gt;</content><author><name>elephwebb</name></author><category term="posts" /><summary type="html">1.Describe N+1 problem and explain briefly the math behind SQL queries and what to be careful about to get the best from ORMs like Eloquent and the abstraction that it brings;</summary></entry><entry><title type="html">Building a Test-Driven AngularJS 1.4/1.6</title><link href="/posts/2017-07-06-building-a-test-driven-angularjs-crm/" rel="alternate" type="text/html" title="Building a Test-Driven AngularJS 1.4/1.6" /><published>2017-07-06T00:00:00-03:00</published><updated>2017-07-06T00:00:00-03:00</updated><id>/posts/building-a-test-driven-angularjs-crm</id><content type="html" xml:base="/posts/2017-07-06-building-a-test-driven-angularjs-crm/">&lt;p&gt;&lt;a href=&quot;https://elephwebb.github.io/testDrivenAngularJS-CRM/&quot;&gt;Code source&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
-
-&lt;p&gt;This is a full-stack javascript CRM, it will include a node.js API eventually but for now I will be focusing on the frontend and use test-driven $httpBackend to Mock the endpoints.&lt;/p&gt;
-
-&lt;p&gt;Why AngularJS and not Angular2-4 or React or another “modern” framework?&lt;/p&gt;
-
-&lt;p&gt;Just because AngularJS is still a great tool to build enhanced applications which do not require the complexity that thouse other frameworks bring, but still can be “Modern” if we apply javascript good practices, ES6, tools like Browser-Sync and use tests to orient our development. Plus, many web applications out there still use AngularJS and doesn’t have the intention to change so far.&lt;/p&gt;
-
-&lt;p&gt;Lots of the features of our development were extracted from hours of learning and some code hacking, checkout all the &lt;a href=&quot;#resources&quot;&gt;resources below&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;setting-the-environment&quot;&gt;Setting the environment&lt;/h2&gt;
-
-&lt;p&gt;Starting coding on top of a solid codebase, that uses &lt;a href=&quot;https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md&quot;&gt;best practices&lt;/a&gt; from &lt;a href=&quot;https://johnpapa.net/angular-style-guide/&quot;&gt;Jonh Pappa&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;git clone the following repo:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/elephwebb/testDrivenAngularJS-CRM.git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;define-requirements&quot;&gt;Define requirements&lt;/h2&gt;
-
-&lt;p&gt;What our CRM will have and what not…&lt;/p&gt;
-
-&lt;h2 id=&quot;continous-delivery&quot;&gt;Continous Delivery&lt;/h2&gt;
-
-&lt;p&gt;Use CircleCI and/or TravisCI to deploy&lt;/p&gt;
-
 &lt;h2 id=&quot;deploy&quot;&gt;Deploy&lt;/h2&gt;
 
-&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.pluralsight.com/courses/play-by-play-papa-bell&quot;&gt;Pluralsight-Play-by-Play-with-Jonh-Pappa&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.pluralsight.com/paths/angular-js&quot;&gt;AngularJS Complete Learning Path&lt;/a&gt;&lt;/p&gt;</content><author><name>elephwebb</name></author><category term="posts" /><category term="angularJS" /><category term="CRM" /><category term="javascript" /><summary type="html">Using best practices</summary></entry><entry><title type="html">Git Permissions Denied Public Key</title><link href="/posts/2017-01-10-git-permission-denied-public-key/" rel="alternate" type="text/html" title="Git Permissions Denied Public Key" /><published>2017-01-10T00:00:00-03:00</published><updated>2017-01-10T00:00:00-03:00</updated><id>/posts/git-permission-denied-public-key</id><content type="html" xml:base="/posts/2017-01-10-git-permission-denied-public-key/">&lt;p&gt;A common problem that once and while I used to get through:&lt;/p&gt;
-
-&lt;p&gt;Error:
-Permission denied (publickey).
-fatal: Could not read from remote repository.&lt;/p&gt;
-
-&lt;p&gt;Lets go through the following step/diagnostics:&lt;/p&gt;
-
-&lt;p&gt;Please make sure you have the correct access rights
-and the repository exists.&lt;/p&gt;
-
-&lt;h4 id=&quot;1-is-ssh-keys-added-remotely-on-bitbucket-github-gitlab&quot;&gt;1) is SSH Keys added remotely on Bitbucket, GitHub, GitLab?&lt;/h4&gt;
-
-&lt;h4 id=&quot;11-check-your-keys-locally-on-your-unixmac-shell&quot;&gt;1.1) Check your keys locally on your *Unix/Mac shell:&lt;/h4&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh-add -l
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The result should look like: (can have more than one, and/or using 4096 hash key)&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2048 SHA256:TC7wexj0ceYk3lvtvb0hFc1yQclWl9O0jYvPlJhyWH4 /home/USERNAME/.ssh/id_rsa (RSA)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;If doesn’t have SSH keys, generate them, follow the article on Bitbucket to &lt;a href=&quot;https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html&quot;&gt;set SSH keys&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://confluence.atlassian.com/bitbucket/configure-multiple-ssh-identities-for-gitbash-mac-osx-linux-271943168.html?_ga=2.133857606.91896796.1513512003-507030520.1505085689&quot;&gt;For Multiple keys if is the case&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;2-stepdiagnostic-check-the-connection-with-your-server&quot;&gt;2 step/diagnostic: check the connection with your server&lt;/h4&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo ssh -Tv git@bitbucket.org
-sudo ssh -Tv git@github.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;3-stepdiagnostic-check-the-remote-url&quot;&gt;3 step/diagnostic: check the remote url&lt;/h4&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git remote -v
-
-Result 
-
-origin git@bitbucket.org:USERNAMEREPO/REPOSIRTORY.git (fetch)
-origin git@bitbucket.org:USERNAMEREPO/REPOSIRTORY.git (push)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Change URL, try:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git remote set-url origin https://USERNAME@bitbucket.org/USERNAME-REPO/REPOSITORY.git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Should look like this:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git remote -v
-
-origin https://USERNAME@bitbucket.org/USERNAME-REPO/REPOSITORY.git (fetch)
-
-origin https://USERNAME@bitbucket.org/USERNAME-REPO/REPOSITORY.git (push)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;4-stepdiagnostic-check-use-of-sudo-before-git-command-when-is-to-remote-server&quot;&gt;4 step/diagnostic: check use of sudo before git command when is to remote server&lt;/h4&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git push -u origin master  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;versus&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo git push -u origin master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>elephwebb</name></author><category term="posts" /><category term="Troubleshooting" /><summary type="html">A common problem that once and while I used to get through:</summary></entry></feed>
+&lt;h2 id=&quot;measure&quot;&gt;Measure&lt;/h2&gt;</content><author><name>elephwebb</name></author><category term="posts" /><category term="test-driven" /><category term="rest" /><category term="laravel" /><summary type="html">Using best practices</summary></entry></feed>
