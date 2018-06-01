@@ -6,11 +6,10 @@ tags: [Algolia, PHP, MySQL, Laravel, Codeigniter]
 work: "PHP"
 ---
 
-## Guindastes.com ##
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/logonovo.jpg){: .align-center}
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/guindastesStats.jpg){: .align-center}
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/guindastesStats.png){: .align-center}
 
 A web portal that connects construction machinery companies to their clientes, displaying their equipments in the main search of the site. 
 
