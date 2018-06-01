@@ -24,23 +24,23 @@ Login: CUIT: 44-44444444-4
 Password: gestion
 
 
-Features:
+Main Features:
 
 ### Responsive Layout ###
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/mobileCuenca.png){: .align-center}
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/mobileCuenca.png){: .align-center height="350px" width="300px"}
 
+- Dynamic Datatable with Search Capabilitie in All Modules and AJAX for better perfomance
 - Massive Import from CSV to Database;
-- Multi-tenant Client and User
-- PDF Report individual
+- Multi-Tenant Structure (Clientes, Cartas, Users)
+- File Upload checking file size, reducing image and checking type
+- Multi Image Scanned Upload reducing image size to A4, 72ddi
+- PDF Report (individual) in the Cartas de Porte DataTable
 - PDF Report All
-- CSV Report
-- Dynamic Datatable with Search Capabilitie in All Modules
+- CSV Report Export with Filters being applied
 - Email Sending using Sendgrid API
 - CUIT checking and Input-Masking
 - Validations to avoid repeated CUIT and File Number ID on CSV Import and CRUDs
 - Password Encryption using last standards and practices
-- File Upload checking file size, reducing image and checking type
-- Multi Image Scanned Upload reducing image size to A4, 72ddi
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/importacionCSVConExito.png){: .align-center}
 

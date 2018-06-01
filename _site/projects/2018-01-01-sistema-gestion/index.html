@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-    <title>9dapps.com</title>
-    <meta name="description" content="Apps Marketplace: Save time buying pre-built web/mobile apps for 9 dollars">
-    <link rel="canonical" href="http://localhost:4000/projects/2017-02-06-9-dapps-com/">
+    <title>Sistema de Gestión Portuaria</title>
+    <meta name="description" content="PHP, Javascript, MySQL">
+    <link rel="canonical" href="http://localhost:4000/projects/2018-01-01-sistema-gestion/">
   
 
   <script>
@@ -27,7 +27,7 @@
 </head>
 
 
-  <body class="layout--page 9dapps-com">
+  <body class="layout--page sistema-de-gestión-portuaria">
 
     <nav class="skip-links">
   <h2 class="screen-reader-text">Skip links</h2>
@@ -191,7 +191,7 @@
 
   <div class="inner">
     <div class="intro-text">
-      <h1 class="intro-title">9dapps.com
+      <h1 class="intro-title">Sistema de Gestión Portuaria
 </h1>
       
 
@@ -200,9 +200,9 @@
           
 
           <p class="entry-meta">
-            <span class="byline-item"><svg class="icon icon--calendar" width="16px" height="16px"><use xlink:href="/assets/icons/icons.svg#icon-calendar"></use></svg><time datetime="2017-02-06T00:00:00-03:00">February 6, 2017</time></span>
+            <span class="byline-item"><svg class="icon icon--calendar" width="16px" height="16px"><use xlink:href="/assets/icons/icons.svg#icon-calendar"></use></svg><time datetime="2018-01-01T00:00:00-03:00">January 1, 2018</time></span>
             
-              <span class="byline-item"><svg class="icon icon--folder" width="16px" height="16px"><use xlink:href="/assets/icons/icons.svg#icon-folder"></use></svg>&nbsp;Ecommerce, MEAN
+              <span class="byline-item"><svg class="icon icon--folder" width="16px" height="16px"><use xlink:href="/assets/icons/icons.svg#icon-folder"></use></svg>&nbsp;PHP
 </span>
             
             
@@ -222,7 +222,54 @@
   <div class="inner">
     <article class="entry-wrap">
       <div class="entry-content">
-        
+        <p><img src="http://localhost:4000/assets/images/cuencaLogin.png" alt="image-center" class="align-center" /></p>
+
+<p>Cuenca SIS is an internal management system used to manage documents related to commodities imported at Argentina seaports.</p>
+
+<p>It’s created using PHP7, MVC patterns, Javascript and MySQL.</p>
+
+<p>You can check out a <a href="https://fierce-lake-26418.herokuapp.com/" target="_blank">demo</a> hosted in Heroku.</p>
+
+<p><strong>Notice: Images Scanned Upload, TCPDFs generation are disabled in Heroku</strong></p>
+
+<p>SYSAdmin
+Login: CUIT: 99-99999999-9
+Password: gestion</p>
+
+<p>Client (Only can see his data)
+Login: CUIT: 44-44444444-4
+Password: gestion</p>
+
+<p>Main Features:</p>
+
+<h3 id="responsive-layout">Responsive Layout</h3>
+<p><img src="http://localhost:4000/assets/images/mobileCuenca.png" alt="image-center" class="align-center" height="350px" width="300px" /></p>
+
+<ul>
+  <li>Dynamic Datatable with Search Capabilitie in All Modules and AJAX for better perfomance</li>
+  <li>Massive Import from CSV to Database;</li>
+  <li>Multi-Tenant Structure (Clientes, Cartas, Users)</li>
+  <li>File Upload checking file size, reducing image and checking type</li>
+  <li>Multi Image Scanned Upload reducing image size to A4, 72ddi</li>
+  <li>PDF Report (individual) in the Cartas de Porte DataTable</li>
+  <li>PDF Report All</li>
+  <li>CSV Report Export with Filters being applied</li>
+  <li>Email Sending using Sendgrid API</li>
+  <li>CUIT checking and Input-Masking</li>
+  <li>Validations to avoid repeated CUIT and File Number ID on CSV Import and CRUDs</li>
+  <li>Password Encryption using last standards and practices</li>
+</ul>
+
+<p><img src="http://localhost:4000/assets/images/importacionCSVConExito.png" alt="image-center" class="align-center" /></p>
+
+<p><img src="http://localhost:4000/assets/images/cuencaFicha.png" alt="image-center" class="align-center" /></p>
+
+<h3 id="reporte-pdf-con-imágenes-escaneadas">Reporte PDF con imágenes escaneadas</h3>
+
+<p><img src="http://localhost:4000/assets/images/pdfCartaPorte.png" alt="image-center" class="align-center" /></p>
+
+<p><img src="http://localhost:4000/assets/images/cuencaSisReporte.png" alt="image-center" class="align-center" /></p>
+
 
       </div>
     </article>

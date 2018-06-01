@@ -203,7 +203,7 @@
             <span class="byline-item"><svg class="icon icon--calendar" width="16px" height="16px"><use xlink:href="/assets/icons/icons.svg#icon-calendar"></use></svg><time datetime="2018-02-19T00:00:00-03:00">February 19, 2018</time></span>
             
             
-              <span class="byline-item"><svg class="icon icon--stopwatch" width="16px" height="16px"><use xlink:href="/assets/icons/icons.svg#icon-stopwatch"></use></svg>2 min read</span>
+              <span class="byline-item"><svg class="icon icon--stopwatch" width="16px" height="16px"><use xlink:href="/assets/icons/icons.svg#icon-stopwatch"></use></svg>~1 min read</span>
             
             
           </p>
@@ -232,110 +232,6 @@
 <p>The code source and online API can be found in <a href="https://github.com/elephwebb/laravel-test-driven-rest-api">GitHub</a> and you can contribute if you want.</p>
 
 <p>Here is the <a href="https://trello.com/b/FVryIUaW">KANBAN</a> of the project.</p>
-
-<h2 id="quick-summary">Quick Summary</h2>
-
-<ul>
-  <li><a href="#toolbelt">Toolbelt</a></li>
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#business-model">Define Business Model</a></li>
-  <li><a href="#requirements">Requirements with KanBan</a></li>
-  <li><a href="#rest-api-endpoints">API Endpoints</a></li>
-  <li><a href="#design-api">Design API</a></li>
-  <li><a href="#pre-testing-the-api">Pre Testing the API</a></li>
-  <li><a href="#development-environment">Development Environment</a></li>
-  <li><a href="#git-workflow">Git Workflow</a></li>
-  <li><a href="#code">Code</a></li>
-  <li><a href="#push-always">Push Always</a></li>
-  <li><a href="#deploy">Deploy</a></li>
-  <li><a href="#measure">Measure</a></li>
-</ul>
-
-<p>We will in future split the section <a href="#code">Code</a> in small chunks for better readability.</p>
-
-<h2 id="toolbelt">ToolBelt</h2>
-
-<ul>
-  <li>GIT, Varnish AND/OR <a href="http://laradock.io/">Docker</a> - Development Environment</li>
-  <li>PHP Laravel, OOP, SOLID, Design Patterns</li>
-  <li>APIRY for API Design and Tests</li>
-  <li>Postman / SoapUI for simple tests on endpoints</li>
-  <li>TravisCI for Continous Integration</li>
-  <li>Loader.io for benchmark</li>
-  <li>Heroku to publish our API</li>
-</ul>
-
-<p>We will pre-built the API Schema and Docs using <a href="https://apiary.io/">APIRY</a> before write a single line of code, mapping our business model/rules to the schema.</p>
-
-<p>Basically the idea is to document the Endpoints using a standard so it’s easier to design, test and colaborate with others developers, so it’s clear what the API does or not without spend time write down software to implement it. It’s important spend some time think what we want to accomplish, what we want to build.</p>
-
-<p>That is our first move toward a <strong>better code</strong> and <strong>client happiness</strong>.</p>
-
-<p>After that we will dive in actually develop it with tests and Laravel best practices in mind to detect errors and behaviors quickly, use SOLID principles and Design Patterns to build an application that can scale.</p>
-
-<p>Push the code with GIT to TravisCI which will automate some tests before deploy to our server, in our case, Heroku.</p>
-
-<p>To monitor the perfomance of our API we will use <a href="https://loader.io/">Loader.io</a>.</p>
-
-<p>We will use <a href="https://www.getpostman.com/">Postman</a> to check the responses from the API, we also will try out <a href="https://www.soapui.org/">SoapUI</a>.</p>
-
-<h2 id="introduction">Introduction</h2>
-
-<p>First of all, why would you like to build an API, it’s crucial to understand the reason behind and why it’s so popular nowadays.</p>
-
-<p>It follows a software architecture called <a href="https://martinfowler.com/articles/microservices.html">Micro Services</a>.</p>
-
-<blockquote>
-  <p><cite>In short, the microservice architectural style [1] is an approach to developing a single application as a suite of small services, each running in its own process and communicating with lightweight mechanisms, often an HTTP resource API. <a href="https://martinfowler.com/">Martin Fowler</a> and <a href="https://twitter.com/boicy">James Lewis</a></cite></p>
-</blockquote>
-
-<p>Not get in too much detail about it and focus on the practical side of code using a test-driven aproach as a key factor inside the <a href="http://agilemanifesto.org/principles.html">Agile Methodology</a>.</p>
-
-<p>I definetly advice take a look at <a href="https://geemus.gitbooks.io/http-api-design/content/en/">HTTP API Designs</a> for more information.</p>
-
-<p>As Phil Sturgeon suggest in his book <a href="https://www.amazon.com/?afiliate_program=jhonyvidal">Building APIs you don’t hate</a>.</p>
-
-<p>Define the API endpoints even if in a piece of paper (or initially)</p>
-
-<ul>
-  <li>[ ] <a href="#business-model">Business Model</a></li>
-  <li>[ ] <a href="#api-endpoints">API Endpoints</a></li>
-</ul>
-
-<h2 id="business-model">Business Model</h2>
-
-<h2 id="rest-api-endpoints">REST API Endpoints</h2>
-
-<h2 id="requirements">Requirements</h2>
-
-<h2 id="design-api">Design Api</h2>
-
-<h2 id="pre-testing-the-api">Pre Testing The Api</h2>
-
-<h2 id="development-environment">Development Environment</h2>
-
-<h2 id="git-workflow">Git Workflow</h2>
-
-<h2 id="code">Code</h2>
-
-<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">namespace</span> <span class="nx">App</span><span class="p">;</span>
-
-<span class="k">use</span> <span class="nx">Laravel\Passport\HasApiTokens</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Illuminate\Notifications\Notifiable</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Illuminate\Foundation\Auth\User</span> <span class="k">as</span> <span class="nx">Authenticatable</span><span class="p">;</span>
-
-<span class="k">class</span> <span class="nc">User</span> <span class="k">extends</span> <span class="nx">Authenticatable</span>
-<span class="p">{</span>
-    <span class="k">use</span> <span class="nx">HasApiTokens</span><span class="p">,</span> <span class="nx">Notifiable</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h2 id="push-always">Push Always</h2>
-
-<h2 id="deploy">Deploy</h2>
-
-<h2 id="measure">Measure</h2>
-
 
       </div>
     </article>
