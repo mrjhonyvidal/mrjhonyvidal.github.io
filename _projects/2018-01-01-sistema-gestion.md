@@ -26,6 +26,9 @@ Password: gestion
 
 Features:
 
+### Responsive Layout ###
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/mobileCuenca.png){: .align-center}
+
 - Massive Import from CSV to Database;
 - Multi-tenant Client and User
 - PDF Report individual
