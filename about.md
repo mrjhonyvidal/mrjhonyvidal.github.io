@@ -4,12 +4,9 @@ title: "About me"
 layout: about
 author:
   name: ElephWebb
-  picture: /assets/images/profile_freelancer_smaller.jpg
 ---
 
 ## Who am I?
-
-My name is Jhony Vidal and I was born in São Paulo (Brazil), living **permanently** in Buenos Aires (Argentina) already 7 years, a country that I respect a lot and where my heart lives. 
 
 I'm autodidact, gamer, web developer, passionated about chess, jazz, folk and gypsy songs.
 

@@ -11,10 +11,7 @@ So, do you need a hand in launch your next big project online? I think I can hel
 
 I’m a fullstack web and mobile developer with 7 years of experience developing intranet systems and websites.
 
-![right-aligned-image](https://elephwebb.github.io/assets/images/freelancer_work-320.jpg){: .align-right}
-
 With focus on clean code, good usability and deadlines. 
-
 
 You can check a [list of my projects here](/projects) and what tools were used on each project individually.
 
@@ -32,15 +29,9 @@ BACKEND
 - Databases: MySQL, PostgreSQL, MongoDB, Redis, SQLite3
 - CMS/Ecommerce: Wordpress CMS, WooCommerce, OpenCart, Magento
 
-
 But also manage well SEO, Product Design, UI/UX and [translations](https://getnative.me/user/8600). 
 
-Here is my [Curriculum Vitae](/cv).
-
-Please send me a message through the form bellow or use one of the following Freelancer Plataforms: [Workana](https://www.workana.com/freelancer/22c4385db2ad4f196384541a2314bda9), currently my rank in Workana is: #2,136 of 1,371,671 people and Ranked in Argentina: #55.
-
-
-I will get back to you within 24 hours with a estimated deadline and price for the job that fits your budget.
+Please send me a message through the form bellow or use one of the following Freelancer Plataforms: [Workana](https://www.workana.com/freelancer/22c4385db2ad4f196384541a2314bda9).
 
 
 I'll be more than happy to work in your next great App. :-)
