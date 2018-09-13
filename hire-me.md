@@ -11,7 +11,7 @@ So, do you need a hand in launch your next big project online? I think I can hel
 I’m a fullstack web and mobile developer with 7 years of experience developing intranet systems and websites.
 I speak fluently portuguese, spanish and english.
 
-![right-aligned-image](https://elephwebb.github.io/assets/images/golang_coder.gif){: .align-right}
+![right-aligned-image](https://elephwebb.github.io/assets/images/golang-ninja.jpg){: .align-right}
 
 With focus on clean code, good usability. 
 You can check a [list of my projects here](/projects) and what tools were used on each project individually and some of my public code in [GitHub](https://github.com/elephwebb/).
