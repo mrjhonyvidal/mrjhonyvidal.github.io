@@ -47,13 +47,18 @@ Please send me a message through the form bellow or use the following Freelancer
 I'll be more than happy to work in your next great project. :-)
 
 <div id="contact">
-  <form action="http://formspree.io/mrjhonyvidal@gmail.com" method="POST">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" class="full-width"><br>
-    <label for="email">Email Address</label>
-    <input type="email" id="email" name="_replyto" class="full-width"><br>
-    <label for="message">Message</label>
-    <textarea name="message" id="message" cols="30" rows="10" class="full-width"></textarea><br>
-    <input type="submit" value="Send" class="btn">
-  </form>
+<form
+  action="https://formspree.io/f/myylvgge"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="_replyto">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <button type="submit">Send</button>
+</form>
 </div>
