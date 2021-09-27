@@ -1,5 +1,5 @@
 # Theme Skin
-skin: default # default, night, steel
+skin: night # default, night, steel
 
 # Theme Text
 t:
@@ -32,6 +32,5 @@ google_fonts:
 # pages that have a `title`. Add raw page paths in the order you'd like.
 
 navigation_pages:
-  - about.md  
+  - about.md
   - projects.md
-  - hire-me.md

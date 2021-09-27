@@ -3,13 +3,12 @@
 Happy code! Keep learning.
 
 ### Development
+[Install ruby and jekyll](https://jekyllrb.com/docs/installation/ubuntu/).
 
-Install all the dependencies and run with hot reloading enabled
+Install all the dependencies and run with hot reloading enabled:
 ```
 bundle install
-
 bundle exec jekyll serve --watch
-
 ```
 
 Run with _drafts articles on
@@ -20,9 +19,7 @@ bundle exec jekyll serve --watch --drafts
 
 ## Build
 
-bundle exec jekyll build 
-
-
+bundle exec jekyll build
 
 ### Considerations
 

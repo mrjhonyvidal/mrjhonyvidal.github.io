@@ -1,5 +1,5 @@
 ---
-title: "Hire me"
+title: "Let's build something together"
 layout: about
 permalink: /hire-me/
 author:
@@ -8,8 +8,8 @@ author:
 Hi there,
 
 So, do you need a hand in launch your next big project online? I think I can help you.
-I’m a fullstack web and mobile developer with 7 years of experience developing intranet systems and websites.
-I speak fluently portuguese, spanish and english.
+I’m a fullstack web and mobile developer
+I speak portuguese, spanish and english.
 
 ![right-aligned-image](https://elephwebb.github.io/assets/images/golang_coder.gif){: .align-right height="250px" width="250px"}
 
@@ -17,30 +17,32 @@ With focus on clean code, good usability.
 You can check a [list of my projects here](/projects) and what tools were used on each project individually and some of my public code in [GitHub](https://github.com/elephwebb/).
 I have experience in a number of different stacks like: 
 
-###FRONTEND
-* Javascript: ES6, Jquery, Backbone.js, Angular, React.js, Vue.js
-* Twitter Bootstrap, HTML5, CSS/SASS/Flexbox/PostCss.
+### FRONTEND
+* Javascript
+* Twitter Bootstrap, HTML5, Tailwind, CSS, touched some of SASS/Flexbox/PostCss.
 * Thymeleaf(Spring Template Engine)
 * Blade and Twig(Laravel and Symfony Template Engine)
 
-###BACKEND
-* **PHP** OOP 5/7, Symfony, Laravel, Codeigniter (3 years)
-* Java 8 Spring - Maven (4 months)
-* Node.js/Express.js (6 months)
-* Ruby on Rails - (1 year)
-* REST APIs / SOAP - XML
-* Databases: MySQL, PostgreSQL, MongoDB, Redis, SQLite3 and ORMs like Eloquent and ORM Propel
-* CMS/Ecommerce: Wordpress CMS, WooCommerce, OpenCart, Magento
+### BACKEND
+* Java
+* Node.js/Express.js
+* **PHP** OOP 5/7, Laravel and Codeigniter
+* Ruby on Rails
+* REST APIs
+* Databases: MySQL, MongoDB
+* ORMs like Eloquent
+* CMS/Ecommerce: Wordpress CMS, WooCommerce
 
 But also manage well SEO, Product Design, UI/UX and [translations](https://getnative.me/user/8600). 
-Please send me a message through the form bellow or use one of the following Freelancer Plataforms: [Workana](https://www.workana.com/freelancer/22c4385db2ad4f196384541a2314bda9).
 
-I'll be more than happy to work in your next great App. :-)
+### Contact Form
+Please send me a message through the form bellow or use the following Freelancer Plataforms: [UpWork](https://www.upwork.com/freelancers/~012f7d94472e05fd37).
 
-###Contact Form
+I'll be more than happy to work in your next great project. :-)
+
 
 <div id="contact">
-  <form action="http://formspree.io/elephwebb@gmail.com" method="POST">
+  <form action="http://formspree.io/mrjhonyvidal@gmail.com" method="POST">
     <label for="name">Name</label>
     <input type="text" id="name" name="name" class="full-width"><br>
     <label for="email">Email Address</label>
