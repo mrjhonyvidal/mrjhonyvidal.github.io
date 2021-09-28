@@ -53,12 +53,12 @@ I'll be more than happy to work in your next great project. :-)
 >
   <label>
     Your email:
-    <input type="email" name="_replyto">
+    <input type="email" name="_replyto" class="full-width">
   </label>
   <label>
     Your message:
-    <textarea name="message"></textarea>
+    <textarea name="message" cols="30" rows="10" class="full-width"></textarea>
   </label>
-  <button type="submit">Send</button>
+  <button type="submit" class="btn">Send</button>
 </form>
 </div>
