@@ -7,8 +7,8 @@
 
   
     <title>Debugging Javascript as a Ninja</title>
-    <meta name="description" content="Prepare your Environment">
-    <link rel="canonical" href="http://localhost:4000/posts/2018-04-19-debugging-js-like-a-ninja/">
+    <meta name="description" content="Some tips">
+    <link rel="canonical" href="https://mrjhonyvidal.github.io/posts/2018-04-19-debugging-js-like-a-ninja/">
   
 
   <script>
@@ -134,7 +134,7 @@
         <p class="site-title">
           <a href="/">
             
-            <span>ElephWebb.io</span>
+            <span>jvo.io</span>
           </a>
         </p>
       
@@ -176,7 +176,7 @@
             <span class="byline-item"><svg class="icon icon--calendar" width="16px" height="16px"><use xlink:href="/assets/icons/icons.svg#icon-calendar"></use></svg><time datetime="2018-04-19T00:00:00-03:00">April 19, 2018</time></span>
             
             
-              <span class="byline-item"><svg class="icon icon--stopwatch" width="16px" height="16px"><use xlink:href="/assets/icons/icons.svg#icon-stopwatch"></use></svg>2 min read</span>
+              <span class="byline-item"><svg class="icon icon--stopwatch" width="16px" height="16px"><use xlink:href="/assets/icons/icons.svg#icon-stopwatch"></use></svg>~1 min read</span>
             
             
           </p>
@@ -192,34 +192,22 @@
 
 <main id="main" class="page-content" aria-label="Content">
   <div class="index inner">
-    <div><h2 id="prepare-your-environment">Prepare your Environment</h2>
+    <div><h2 id="some-tips">Some tips</h2>
 
-<p>Mistakes happen and by no chance you will write down code without make small tiny mistakes that were not a mistake initially. So why not have a automated way to catch them all and display before even save/compile your code?</p>
-
-<p>Well that is the first step on debugging your code, pre debug automatically using linters, a linters are tools with bunch of rules pre-defined using code standards, and is quite easy to set linters inside our favorite editor(sublime, atom, visual studio code, etc), the linters can also be runned in our command-line console, which is fantastic because we can set these bunch of rules that we want to be followed everytime the whole code is built and deployed to a QA environment, and is fantastic because we assure that not only our code is being “linted” to check mistakes, inconsistences but everyone that colaborate to the project, combining these linters with a nice tests suite stack, the bugs in your system can reduce drastically, which means less time debugging “ghost” mistakes and less time refactoring/improving features and adding more value to your business.</p>
-
-<p>I also would like to mention that debugg smartly is part of a test-driven environment, because if you think write down tests, whether they are functional, acceptance, smokey, end-to-end whatever, the mindset is what counts, think the scenario, figure out what could be an expected error, make the famous Green-red-Green cycle, make it pass with minimal solution, then make it fails intentionally/expectedly, then refactor the code make it pass. Which reduce the time debugging the error in the long run. And a last think, debugging is not google the error, but think the error, rollback to a safe point where everything is working, try to expect the result, code in small pieces.</p>
-
-<p>Here I share some secret techniquees by <a href="https://www.quora.com/profile/Marek-Kirejczyk">Marek Kirejczyk, (VP of Engineering at DaftCode</a> on <a href="http://qr.ae/TU16Nn">Quora</a> where he says:</p>
+<p>Here I share some secret techniques by <a href="https://www.quora.com/profile/Marek-Kirejczyk">Marek Kirejczyk, (VP of Engineering at DaftCode</a> on <a href="http://qr.ae/TU16Nn">Quora</a> where he says:</p>
 
 <ul>
   <li>
     <p>Debug using binary search on your code. You can also do binary search your repository history (see git bisect). This technique can be very helpful when looking for bugs in the code.</p>
   </li>
   <li>
-    <p>Undo the last change if you brake something. Because you make small steps and you keep app covered wit tests, you should be able quickly notice if you break something. Just undo the recent change and start step from scratch.</p>
+    <p>Undo the last change if you brake something. Because you make small steps, and you keep app covered wit tests, you should be able quickly notice if you break something. Just undo the recent change and start step from scratch.</p>
   </li>
 </ul>
 
 <h2 id="setting-atom-and-eslint">Setting Atom and EsLint</h2>
 
 <p>Here is quick video by <a href="https://www.youtube.com/watch?v=qhuFviJn-es">Harry Wolff</a>shared by <a href="https://www.freecodecamp.org/">FreeCodeCamp</a> in their <a href="'https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ'">YouTube Channel</a>.</p>
-
-<p>To complement the video, because, it turns down that in Atom didn’t Lint the errors up on only following Harry’s video, not sure why, besides he uses Visual Studio Code and in VSCode it worked out - tested. <a href="What is ESLint? How do I set it up on Atom?">https://hackernoon.com/what-is-eslint-how-do-i-set-it-up-on-atom-70f270f57296</a>. One detail, Atom recognizes every spaces inside the Tabs, not really Tabs, so in the eslintrc.json file use {“indent”: { “errors”, 2 } } if you use Tabs like me instead of spaces to make your identation.</p>
-
-<p>There are funny sceneres related to this Tab versus Spaces in Sillicon Valley’s Serie : <a href="https://www.youtube.com/watch?v=V7PLxL8jIl8">I will update show the videos here instead of links to YouTube</a>… one day. :-) 5 min break.</p>
-
-<h2 id="continue">Continue…</h2>
 </div>
 
     <div>
@@ -245,14 +233,14 @@
 
     
 
-      <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="15 309.7 16 16"><g><path d="M23.9 315.1v3.6c0 .5-.4.9-.9.9s-.9-.4-.9-.9v-3.6h1.8z"/><path d="M30.1 317.7c.5 3.9-2.3 7.5-6.2 7.9-3.9.5-7.5-2.3-7.9-6.2-.5-3.9 2.3-7.5 6.2-7.9v-1.8H24v1.8c1.1.1 2.7.7 3.5 1.4l1.3-1.3 1.3 1.3-1.3 1.3c.5.9 1.2 2.5 1.3 3.5zm-1.8.9c0-2.9-2.4-5.3-5.3-5.3s-5.3 2.4-5.3 5.3 2.4 5.3 5.3 5.3 5.3-2.3 5.3-5.3z"/></g></svg></span>2 min read</li>
+      <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="15 309.7 16 16"><g><path d="M23.9 315.1v3.6c0 .5-.4.9-.9.9s-.9-.4-.9-.9v-3.6h1.8z"/><path d="M30.1 317.7c.5 3.9-2.3 7.5-6.2 7.9-3.9.5-7.5-2.3-7.9-6.2-.5-3.9 2.3-7.5 6.2-7.9v-1.8H24v1.8c1.1.1 2.7.7 3.5 1.4l1.3-1.3 1.3 1.3-1.3 1.3c.5.9 1.2 2.5 1.3 3.5zm-1.8.9c0-2.9-2.4-5.3-5.3-5.3s-5.3 2.4-5.3 5.3 2.4 5.3 5.3 5.3 5.3-2.3 5.3-5.3z"/></g></svg></span>~1 min read</li>
 
     
     </ul>
   </footer>
   <div class="entry-excerpt">
     
-      <h2 id="prepare-your-environment">Prepare your Environment</h2>
+      <h2 id="some-tips">Some tips</h2>
 
 
 
@@ -267,80 +255,6 @@
 </article>
 
 
-  
-
-<article class="entry">
-  <header class="entry-header">
-    <h3 class="entry-title">
-      <a href="/posts/2018-04-18-diving-into-searchability/" rel="bookmark">Divign into Searchability
-</a>
-    </h3>
-    
-    
-  </header>
-   <footer class="entry-meta">
-    <ul>
-
-    
-
-      <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="15 309.7 16 16"><g><path d="M23.9 315.1v3.6c0 .5-.4.9-.9.9s-.9-.4-.9-.9v-3.6h1.8z"/><path d="M30.1 317.7c.5 3.9-2.3 7.5-6.2 7.9-3.9.5-7.5-2.3-7.9-6.2-.5-3.9 2.3-7.5 6.2-7.9v-1.8H24v1.8c1.1.1 2.7.7 3.5 1.4l1.3-1.3 1.3 1.3-1.3 1.3c.5.9 1.2 2.5 1.3 3.5zm-1.8.9c0-2.9-2.4-5.3-5.3-5.3s-5.3 2.4-5.3 5.3 2.4 5.3 5.3 5.3 5.3-2.3 5.3-5.3z"/></g></svg></span>~1 min read</li>
-
-    
-    </ul>
-  </footer>
-  <div class="entry-excerpt">
-    
-      <h2 id="still-preparing">Still preparing…</h2>
-
-
-
-        <p><a href="" target="_blank" class="more-link">Visit Website <span class="icon icon--arrow-right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="50.4 -114.8 16 16"><path d="M63.1-107.7l-6.7-6.7c-.2-.3-.6-.4-.9-.4-.4 0-.7.1-.9.4l-.8.8c-.3.3-.4.6-.4.9 0 .4.1.7.4.9l5 5-5 5c-.3.3-.4.6-.4.9 0 .4.1.7.4.9l.8.8c.3.3.6.4.9.4.4 0 .7-.1.9-.4l6.7-6.7c.3-.3.4-.6.4-.9 0-.4-.2-.7-.4-.9z"/></svg></span></a>
-
-
-        | <a href="/posts/2018-04-18-diving-into-searchability/" class="more-link">Read More <span class="icon icon--arrow-right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="50.4 -114.8 16 16"><path d="M63.1-107.7l-6.7-6.7c-.2-.3-.6-.4-.9-.4-.4 0-.7.1-.9.4l-.8.8c-.3.3-.4.6-.4.9 0 .4.1.7.4.9l5 5-5 5c-.3.3-.4.6-.4.9 0 .4.1.7.4.9l.8.8c.3.3.6.4.9.4.4 0 .7-.1.9-.4l6.7-6.7c.3-.3.4-.6.4-.9 0-.4-.2-.7-.4-.9z"/></svg></span></a></p>
-    
-  </div>
-
-</article>
-
-
-  
-
-<article class="entry">
-  <header class="entry-header">
-    <h3 class="entry-title">
-      <a href="/posts/2018-02-19-building-a-test-driven-rest-subscription-api/" rel="bookmark">Building a Test-Driven REST Subscription API
-</a>
-    </h3>
-    
-    
-  </header>
-   <footer class="entry-meta">
-    <ul>
-
-    
-
-      <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="15 309.7 16 16"><g><path d="M23.9 315.1v3.6c0 .5-.4.9-.9.9s-.9-.4-.9-.9v-3.6h1.8z"/><path d="M30.1 317.7c.5 3.9-2.3 7.5-6.2 7.9-3.9.5-7.5-2.3-7.9-6.2-.5-3.9 2.3-7.5 6.2-7.9v-1.8H24v1.8c1.1.1 2.7.7 3.5 1.4l1.3-1.3 1.3 1.3-1.3 1.3c.5.9 1.2 2.5 1.3 3.5zm-1.8.9c0-2.9-2.4-5.3-5.3-5.3s-5.3 2.4-5.3 5.3 2.4 5.3 5.3 5.3 5.3-2.3 5.3-5.3z"/></g></svg></span>~1 min read</li>
-
-    
-    </ul>
-  </footer>
-  <div class="entry-excerpt">
-    
-      <p>Using best practices</p>
-
-
-
-        <p><a href="" target="_blank" class="more-link">Visit Website <span class="icon icon--arrow-right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="50.4 -114.8 16 16"><path d="M63.1-107.7l-6.7-6.7c-.2-.3-.6-.4-.9-.4-.4 0-.7.1-.9.4l-.8.8c-.3.3-.4.6-.4.9 0 .4.1.7.4.9l5 5-5 5c-.3.3-.4.6-.4.9 0 .4.1.7.4.9l.8.8c.3.3.6.4.9.4.4 0 .7-.1.9-.4l6.7-6.7c.3-.3.4-.6.4-.9 0-.4-.2-.7-.4-.9z"/></svg></span></a>
-
-
-        | <a href="/posts/2018-02-19-building-a-test-driven-rest-subscription-api/" class="more-link">Read More <span class="icon icon--arrow-right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="50.4 -114.8 16 16"><path d="M63.1-107.7l-6.7-6.7c-.2-.3-.6-.4-.9-.4-.4 0-.7.1-.9.4l-.8.8c-.3.3-.4.6-.4.9 0 .4.1.7.4.9l5 5-5 5c-.3.3-.4.6-.4.9 0 .4.1.7.4.9l.8.8c.3.3.6.4.9.4.4 0 .7-.1.9-.4l6.7-6.7c.3-.3.4-.6.4-.9 0-.4-.2-.7-.4-.9z"/></svg></span></a></p>
-    
-  </div>
-
-</article>
-
-
         
       </div>
     </div>
@@ -348,7 +262,7 @@
     <footer id="footer" class="site-footer">
   <div class="copyright">
     
-      <p>&copy; 2021 ElephWebb.io.</p>
+      <p>&copy; 2021 jvo.io.</p>
     
   </div>
 </footer>

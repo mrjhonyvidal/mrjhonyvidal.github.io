@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 lang: en-US
-title: ElephWebb.io
+title: jvo.io
 email: elephwebb@gmail.com
 description:
 baseurl: # the optional subpath of your site, e.g. "/blog"
@@ -80,10 +80,6 @@ collections:
     output    : true
     permalink : /:collection/:path/
     title     : Projects
-  projects:
-    output    : true
-    permalink : /:collection/:path/
-    title     : Posts
 
 # Front Matter Defaults
 defaults:

@@ -17,7 +17,7 @@ I have experience in different tech stacks like:
 ### Frontend
 * Javascript
 * Twitter Bootstrap, HTML5, Tailwind, CSS, touched some of SASS/Flexbox/PostCss.
-* Thymeleaf(Spring Template Engine)
+* Thymeleaf (Spring Template Engine)
 * Blade and Twig(Laravel and Symfony Template Engine)
 
 ### Backend
@@ -37,12 +37,12 @@ I have experience in different tech stacks like:
 * AWS
 
 ### Mobile
-* Flutter
+* Dart/Flutter
 
 But also manage well SEO, Product Design, UI/UX and [translations](https://getnative.me/user/8600). 
 
 ### Contact Form
-Please send me a message through the form bellow or use the following Freelancer Plataforms: [UpWork](https://www.upwork.com/freelancers/~012f7d94472e05fd37).
+Please send me a message through the form bellow or use the following Freelancer Plataform: [UpWork](https://www.upwork.com/freelancers/~012f7d94472e05fd37).
 
 I'll be more than happy to work in your next great project. :-)
 

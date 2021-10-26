@@ -1,5 +1,5 @@
 ---
-title: "Sistema de Gestión Portuaria"
+title: "Online Commodities Port Management System"
 layout: page
 excerpt: "PHP, Javascript, MySQL"
 tags: [JSON, AJAX, PHP7, OOP, MVC]
@@ -9,7 +9,9 @@ work: "PHP"
 
 Cuenca SIS is an internal management system used to manage documents related to commodities imported at Argentina seaports.
 
-It was created from zero using PHP7, MVC patterns, Javascript and MySQL.
+It was created from zero using PHP7 (MVC pattern), Javascript(AJAX-JQuery) and MySQL.
+
+Liked and want to see it running or something similar? <a href="/hire-me#contact-form">Please get in contact with me</a>.
 
 Main Features:
 
