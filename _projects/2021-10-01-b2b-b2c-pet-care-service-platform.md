@@ -10,8 +10,8 @@ work: "Javascript SSr/Sr"
 
 **Aipetto** (in japanese 愛ペット = Ai 愛 ( love ) ペット Petto (pet) is a platform B2B/B2C that allows connecting small businesses that provide pet services to pet owners. Through a simple app the pet owner can check a variety of services Dog Bath/Wash, Dog Nail Clip, Doggie Day Care, Cat Nail Clipping, Vet Consultation, First and Second Vaccine, VN De-flea and worming service, and much more.
 
-Soon the app will be available, check it out in first hand some of the features:
-* Register and Track in real-time pet vaccines and exams applied to the veterinarians that work to the businesses connected to the platform.
+Soon the app will be available, check it out in first hand some features:
+* Register and Track in real-time pet vaccines and exams applied by the veterinarians that work to the businesses connected to the platform.
 * Smart Service Booking System
 * Machine Learning and IA features running out of box to enhance and improve customer service by businesses.
 * Easier collaboration between ONGs to tackle common problems like adoption, donation, or general announcements.
