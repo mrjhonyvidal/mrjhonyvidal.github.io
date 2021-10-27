@@ -15,7 +15,7 @@ Soon the app will be available, check it out in first hand some features:
 * Smart Service Booking System
 * Machine Learning and IA features running out of box to enhance and improve customer service by businesses.
 * Easier collaboration between ONGs to tackle common problems like adoption, donation, or general announcements.
-* Ask for transport/pet taxi as you`d ask for an UBER :-)
+* Ask for transport/pet taxi
 
 Liked? Registed in our <a href="https://www.aipetto.com" target="_blank">web</a> and we let you know as soon the app is up and running.
 
